@@ -1,0 +1,368 @@
+@media screen and (max-width: 1400px) {
+
+  html {
+    font-size: 18px;
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+  }
+  
+  nav {
+    padding: 0px 3%;
+  }
+  .home {
+    height: auto;
+  }
+  section,
+  .contact .row,
+  .project .row,
+  footer .footer-container {
+    padding: 0px 3%;
+    height: auto;
+  }
+  .social-links {
+    padding: 0px 3%;
+  }
+  .home .content h1 .bold {
+    font-size: 1.3rem;
+    font-weight: 500;
+    font-family: "Lemon", serif;
+  }
+
+  nav .logo a {
+    font-size: 1.2rem;
+  }
+
+
+  .project .row img {
+    border-radius: 25px;
+    max-width: 450px;
+    max-height: 350px;
+    object-fit: cover;
+  }
+
+
+
+}
+
+@media screen and (max-width: 1000px) {
+  nav .menu {
+    display: inline-block;
+  }
+  nav .menu .fa-bars {
+    display: none;
+  }
+  nav .menu .fa-x {
+    color: rgb(233, 44, 44);
+    font-size: 30px;
+    display: none;
+  }
+  nav .menu .fa-bars.active {
+    display: block;
+  }
+  nav .menu .fa-x.active {
+    display: block;
+  }
+
+  .social-links {
+    padding: 0px 3%;
+  }
+
+  nav .navbar {
+    padding-top: 30px;
+    display: block;
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    top: 40px;
+    left: 100%;
+
+    height: 100vh;
+  }
+  nav .cv {
+    position: absolute;
+    top: 340px;
+    z-index: 1000;
+    width: 100%;
+    /* text-align: center; */
+    /* display: block; */
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 340px;
+    margin: 0;
+    left: 100%;
+  }
+  nav.active .navbar {
+    display: block;
+    position: absolute;
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    top: 50px;
+    left: 0;
+
+    height: 100vh;
+  }
+  nav.active .cv {
+    width: 100%;
+    /* text-align: center; */
+    /* display: block; */
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 340px;
+    margin: 0;
+    left: 0;
+
+    /* height: 100vh; */
+  }
+  nav .cv a {
+    width: 200px;
+    text-align: center;
+    display: inline-block;
+
+    /* position: absolute;
+        top: 60px;
+        height: 100vh; */
+  }
+  nav .navbar a {
+    /* width: 100%; */
+    margin-bottom: 1rem;
+    margin-left: 0px;
+  }
+
+  /* about section  */
+  .home {
+    display: flex;
+    flex-direction: column;
+  }
+  .home .image {
+    order: -1;
+    max-width: 400px;
+    width: 80%;
+    height: 300px;
+  }
+  .home .content {
+    /* border: 1px solid black; */
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .social-links {
+    width: 80%;
+    margin: auto;
+  }
+
+  .skills .row {
+    /* border: 1px solid black; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 170px);
+    /* align-content: space-between; */
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  /* about  */
+  .about {
+    margin: 60px auto;
+    /* border: 1px solid black; */
+    display: block;
+    /* flex-direction: row; */
+    gap: 40px;
+  }
+
+  .about div {
+    /* border: 1px solid black; */
+    width: 100%;
+  }
+
+  .about .image-div img {
+    max-width: 400px;
+    width: 100%;
+  }
+
+  .about .image-div,
+  .about .content {
+    width: 100% !important;
+  }
+
+  /* ============================ */
+  /* .contact    */
+  .contact .row {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    /* padding-top: 100px; */
+  }
+  .contact .row div {
+    width: 100%;
+  }
+  .contact .row .info {
+    padding-left: 0px;
+  }
+
+  .contact .row .btns {
+    /* border: 1px solid black; */
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5px;
+  }
+
+  .contact .row form button {
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 7px 5px;
+    border-radius: 5px;
+    outline: none;
+    border: 2px solid black;
+    background-color: #000;
+    color: white;
+  }
+
+  .contact .row form i {
+    font-size: 20px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+    border: 2px solid black;
+    margin-right: 0.5rem;
+    color: #000;
+    background-color: white;
+  }
+
+
+
+  .project .row:nth-child(even){
+    flex-direction: column;
+justify-content: center;
+gap: 30px;
+
+
+  }
+  .project .row > div {
+    /* border: #1e90ff solid 1px; */
+    width: 100%;
+  }
+  .project .row .image {
+    display: flex;
+    justify-content: center;
+  }
+  .project .row img {
+    max-width: 400px;
+    width: 100%;
+  }
+
+
+
+  .project .row{
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+  }
+
+
+  .project .row:nth-child(odd) .content {
+    order: 1;
+  }
+
+
+}
+
+@media screen and (max-width: 580px) {
+  html {
+    font-size: 18px;
+cursor: auto;
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+    overflow-x: hidden;
+  }
+  nav .cv a {
+    width: 80%;
+
+  }
+
+  .social-links {
+    width: 100%;
+    margin: auto;
+  }
+
+  .home .image {
+    order: -1;
+    max-width: 400px;
+    width: 100%;
+    height: 300px;
+  }
+  .home .content {
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 10px;
+  }
+
+  .home .content h1 {
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+  .home .content h1 .bold {
+    font-size: 1.1rem;
+    font-weight: 500;
+    font-family: "Lemon", serif;
+  }
+  .home .content h1 .outline {
+    /* border: 1px solid black; */
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 1.55rem;
+  }
+
+  .skills .row {
+    /* border: 1px solid black; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 150px);
+    /* grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); */
+
+    /* align-content: space-between; */
+    justify-content: center;
+    gap: 1rem;
+  }
+  .skills .row .box {
+    height: 150px;
+  }
+  .contact .row form button {
+    flex: 1;
+    display: block;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 7px 5px;
+    border-radius: 5px;
+    outline: none;
+    border: 2px solid black;
+    background-color: #000;
+    color: white;
+  }
+  .project .row img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+  }
+}
