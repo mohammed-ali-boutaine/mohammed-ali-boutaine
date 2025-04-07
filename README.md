@@ -1,9 +1,9 @@
 Welcome to my GitHub profile! I'm a **web developer** currently mastering **Laravel, React, TypeScript, and PostgreSQL**. I enjoy building scalable applications and improving my coding skills every day. 🚀
 
 ## 🚀 Tech Stack
-**Frontend:** React, Redux Toolkit, TypeScript, Tailwind CSS.
+**Frontend:** React, Redux Toolkit , Javascript , TypeScript, Tailwind CSS.
 
-**Backend:** Laravel (MVC), PHP, REST APIs.
+**Backend:**  PHP , Laravel (MVC), Nodejs , Python , REST APIs.
 
 **Database:** PostgreSQL, MySQL, MongoDB.
 
