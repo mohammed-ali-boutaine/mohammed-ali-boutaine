@@ -10,6 +10,19 @@
   outline: none;
 }
 
+/* Screen reader only class for accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 :root {
   --bgc: #fff;
   --text-color: #000;
@@ -34,9 +47,6 @@ html {
   box-sizing: border-box;
 } */
 
-
-
-
 /* Hide scroll bars for WebKit-based browsers */
 /* ::-webkit-scrollbar {
   display: none;
@@ -46,7 +56,6 @@ html {
 /* body::-webkit-scrollbar {
   display: block;
 } */
-
 
 a {
   text-decoration: none;
@@ -110,8 +119,8 @@ nav a {
 
 nav .logo a {
   font-size: 1.5rem;
-  font-weight: 400;
-  font-family: "Lemon", serif;
+  font-weight: 500;
+  font-family: "Lexend Deca", sans-serif;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -179,31 +188,16 @@ nav .cv a {
   transition: 0.3s ease;
   position: relative;
   isolation: isolate;
-} /*
-nav .cv a::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  background-color: #fff;
-  inset: 0;
-  transform: scale(0, 1);
-  border-radius: 8px;
-  transition: 0.3s all;
-
-  transform-origin: left;
 }
-nav .cv a:hover::after,
-nav .cv a:focus:after {
-  transform: scale(1, 1);
-} */
+
 nav .cv a:hover {
   cursor: url(../imgs/cursor.svg) 1 1, pointer;
   background-color: transparent;
   color: black;
   border: 2px solid black;
-  padding: 5px 27px;
+  /* padding: 5px 27px; */
 
-  word-spacing: 6px;
+  /* word-spacing: 6px; */
 }
 
 nav .menu {
@@ -212,9 +206,9 @@ nav .menu {
   cursor: pointer;
 }
 /*##############  Main */
-main {
+/* main {
   margin-top: 150px;
-}
+} */
 
 section,
 footer .container {
@@ -231,7 +225,8 @@ footer .container {
 /*### About section*/
 
 .home {
-  height: 40vh;
+  margin-top: 120px;
+  /* max-height: 500px; */
   background-color: #ffffff;
   /* overflow-x: hidden; */
   display: flex;
@@ -244,7 +239,7 @@ footer .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1rem;
+  /* gap: 1rem; */
 }
 
 h1 {
@@ -253,14 +248,14 @@ h1 {
   font-weight: 500;
   font-size: 1.4rem;
 }
-h1 .outline {
+/* h1 .outline {
   color: transparent;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: black;
 
   font-weight: 800;
   font-size: 1.8rem;
-}
+} */
 h2 .outline {
   color: transparent;
   -webkit-text-stroke-width: 2px;
@@ -271,12 +266,51 @@ h2 .outline {
 }
 h1 .bold {
   font-size: 1.6rem;
-  font-weight: 500;
-  font-family: "Lemon", serif;
+  font-weight: 600;
+  font-family: "Lexend Deca", sans-serif;
 }
 .home .typing {
-  margin: 30px 0px;
+  margin: 10px 0px;
   /* text-decoration: underline; */
+}
+
+.cta-buttons {
+  margin: 1.5rem 0px;
+}
+
+.cta-buttons a {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  margin-right: 0.75rem;
+  border: 2px solid black;
+}
+
+/* Primary Button: black background, white text */
+.cta-buttons .btn-primary {
+  background-color: black;
+  color: white;
+}
+
+.cta-buttons .btn-primary:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid white;
+}
+
+/* Secondary Button: white background, black text */
+.cta-buttons .btn-secondary {
+  background-color: white;
+  color: black;
+}
+
+.cta-buttons .btn-secondary:hover {
+  background-color: black;
+  color: white;
+  border: 2px solid white;
 }
 #typing-text {
   /* display: inline-block; */
@@ -309,6 +343,7 @@ h1 .bold {
 }
 
 .social-link {
+  margin-top: 60px;
   max-width: 1240px;
   width: 100%;
 }
@@ -404,8 +439,8 @@ h1 .bold {
 
 .project h1 {
   font-size: 1.5rem;
-  font-weight: bold;
-  font-family: "Lemon";
+  font-weight: 700;
+  font-family: "Lexend Deca", sans-serif;
 }
 .project > h1 {
   margin-bottom: 40px;
@@ -642,8 +677,8 @@ footer *:hover {
 }
 footer .logo {
   font-size: 1.2rem;
-  font-weight: 400;
-  font-family: "Lemon", serif;
+  font-weight: 500;
+  font-family: "Lexend Deca", sans-serif;
 }
 
 footer .footer-container {

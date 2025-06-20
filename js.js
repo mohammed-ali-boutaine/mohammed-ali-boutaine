@@ -1,81 +1,92 @@
+document.addEventListener("DOMContentLoaded", function () {
+  // Menu toggle functionality
+  const menuButton = document.querySelector(".menu");
+  const nav = document.querySelector("nav");
+  const menuBars = document.querySelector("nav .menu .fa-bars");
+  const menuX = document.querySelector("nav .menu .fa-x");
 
+  if (menuButton) {
+    menuButton.addEventListener("click", () => {
+      nav.classList.toggle("active");
+      menuBars.classList.toggle("active");
+      menuX.classList.toggle("active");
+    });
+  }
 
-$(document).ready(function () {
-  $(".menu").on("click", () => {
-    $("nav").toggleClass("active");
-
-    $("nav .menu .fa-bars").toggleClass("active");
-    $("nav .menu .fa-x").toggleClass("active");
-  });
-
+  // Handle scroll events
   window.onscroll = () => {
-    $("nav").removeClass("active");
-    $("nav .menu .fa-x").removeClass("active");
-    $("nav .menu .fa-bars").addClass("active");
+    if (nav) nav.classList.remove("active");
+    if (menuX) menuX.classList.remove("active");
+    if (menuBars) menuBars.classList.add("active");
+
+    // Shrink nav on scroll
+    const navElement = document.querySelector(".nav");
+    if (navElement) {
+      if (window.scrollY > 0) {
+        navElement.classList.add("shrink");
+      } else {
+        navElement.classList.remove("shrink");
+      }
+    }
   };
 
-  $(window).on("scroll", function () {
-    if ($(window).scrollTop() > 0) {
-      $(".nav").addClass("shrink");
+  // Nav link click handling
+  const navLinks = document.querySelectorAll(".nav a");
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      if (menuX) menuX.classList.remove("active");
+      if (menuBars) menuBars.classList.add("active");
+      if (nav) nav.classList.remove("active");
+    });
+  });
+
+  // Typing effect
+  const textElement = document.getElementById("typing-text");
+  if (textElement) {
+    console.log(document.title);
+    let words;
+    // Check if we're on the French version or English version
+    if (document.title.includes("FullStack Developer")) {
+      words = [
+        "do Front-End Development.",
+        "do Back-end Development. ",
+        "Design WebSite. ",
+        "Manage Database. ",
+      ];
     } else {
-      $(".nav").removeClass("shrink");
+      words = [
+        "Faire du développement Front-End. ",
+        "Faire du développement Back-End. ",
+        "Concevoir un site Web. ",
+        "Gérer une base de données. ",
+      ];
     }
-  });
 
-  $(".nav a").on("click", () => {
-    $("nav .menu .fa-x").removeClass("active");
-    $("nav .menu .fa-bars").addClass("active");
+    let wordIndex = 0;
+    let charIndex = 0;
 
-    $(".nav").removeClass("active");
-  });
-
-
-
-  // document.addEventListener("mousemove",(e)=>{
-  //   const mouseX=e.clientX;
-  //   const mouseY=e.clientY;
-
-  //   const anchor = document.getElementById("logo-box");
-  //   const rekt = anchor.getBoundingClientRect();
-  //   const anchorX = rekt.left+rekt.width/2;
-
-  // })
-
-
-  //typing effect
-  const textElement = $('#typing-text');
-  console.log(document.title)
-  let words;
-  if(document.title){
-     words = ['do Front-End Development.', 'do Back-end Development. ', 'Design WebSite. ', 'Manage Database. '];
-
-  }else{
-    words = ['Faire du développement Front-End. ', 'Faire du développement Back-End. ', 'Concevoir un site Web. ', 'Gérer une base de données. '];
-
-  }
-  let wordIndex = 0;
-  let charIndex = 0;
-
-  function type() {
+    function type() {
       if (charIndex < words[wordIndex].length) {
-          textElement.text(textElement.text() + words[wordIndex].charAt(charIndex));
-          charIndex++;
-          setTimeout(type, 100);
+        textElement.textContent =
+          textElement.textContent + words[wordIndex].charAt(charIndex);
+        charIndex++;
+        setTimeout(type, 100);
       } else {
-          setTimeout(erase, 1000);
-      }
-  }
-
-  function erase() {
-      if (charIndex > 0) {
-          textElement.text(words[wordIndex].substring(0, charIndex - 1));
-          charIndex--;
-          setTimeout(erase, 100);
-      } else {
-          wordIndex = (wordIndex + 1) % words.length;
-          setTimeout(type, 500);
+        setTimeout(erase, 1000);
       }
     }
-    setTimeout(type, 500);
 
+    function erase() {
+      if (charIndex > 0) {
+        textElement.textContent = words[wordIndex].substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(erase, 100);
+      } else {
+        wordIndex = (wordIndex + 1) % words.length;
+        setTimeout(type, 500);
+      }
+    }
+
+    setTimeout(type, 500);
+  }
 });

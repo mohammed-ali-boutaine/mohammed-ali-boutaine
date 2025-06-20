@@ -1,11 +1,10 @@
 @media screen and (max-width: 1400px) {
-
   html {
     font-size: 18px;
     scroll-behavior: smooth;
     scroll-padding-top: 100px;
   }
-  
+
   nav {
     padding: 0px 3%;
   }
@@ -25,13 +24,12 @@
   .home .content h1 .bold {
     font-size: 1.3rem;
     font-weight: 500;
-    font-family: "Lemon", serif;
+    font-family: "Lexend Deca", sans-serif;
   }
 
   nav .logo a {
     font-size: 1.2rem;
   }
-
 
   .project .row img {
     border-radius: 25px;
@@ -39,9 +37,6 @@
     max-height: 350px;
     object-fit: cover;
   }
-
-
-
 }
 
 @media screen and (max-width: 1000px) {
@@ -244,14 +239,10 @@
     background-color: white;
   }
 
-
-
-  .project .row:nth-child(even){
+  .project .row:nth-child(even) {
     flex-direction: column;
-justify-content: center;
-gap: 30px;
-
-
+    justify-content: center;
+    gap: 30px;
   }
   .project .row > div {
     /* border: #1e90ff solid 1px; */
@@ -266,45 +257,43 @@ gap: 30px;
     width: 100%;
   }
 
-
-
-  .project .row{
+  .project .row {
     flex-direction: column;
     justify-content: center;
     gap: 30px;
   }
 
-
   .project .row:nth-child(odd) .content {
     order: 1;
   }
-
-
 }
 
 @media screen and (max-width: 580px) {
   html {
     font-size: 18px;
-cursor: auto;
+    cursor: auto;
     scroll-behavior: smooth;
     scroll-padding-top: 100px;
     overflow-x: hidden;
   }
   nav .cv a {
     width: 80%;
-
   }
-
   .social-links {
+    position: static;
     width: 100%;
-    margin: auto;
+    margin: 20px auto;
+    flex-direction: row;
+    justify-content: center;
+    transform: none;
+  }
+  
+  .social-links a {
+    margin: 0 10px;
   }
 
   .home .image {
-    order: -1;
-    max-width: 400px;
-    width: 100%;
-    height: 300px;
+    display: none; /* Hide the hero image on mobile */
   }
   .home .content {
     /* border: 1px solid black; */
@@ -325,7 +314,7 @@ cursor: auto;
   .home .content h1 .bold {
     font-size: 1.1rem;
     font-weight: 500;
-    font-family: "Lemon", serif;
+    font-family: "Lexend Deca", sans-serif;
   }
   .home .content h1 .outline {
     /* border: 1px solid black; */
