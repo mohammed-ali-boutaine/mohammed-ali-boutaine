@@ -31,8 +31,8 @@
 
   .project .row img {
     border-radius: 25px;
-    max-width: 450px;
-    max-height: 350px;
+    max-width: 510px;
+    height: 400px;
     object-fit: cover;
   }
 }
@@ -254,9 +254,14 @@
     flex-direction: column;
     justify-content: center;
     gap: 30px;
+  }  .project .row .content {
+    max-width: 350px;
+    margin: auto;
   }
 
   .project .row:nth-child(odd) .content {
+    /* max-width: 350px;
+    margin: auto; */
     order: 1;
   }
 }

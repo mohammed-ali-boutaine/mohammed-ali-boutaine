@@ -49,11 +49,28 @@ a {
   text-decoration: none;
 }
 
-h2{
+/* h2{
   font-size: 3rem;
     font-weight: 700;
     margin-bottom: 20px;
+} */
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #000;
 }
+.section-title-white {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #f5f5f5;
+}
+.text-center{
+  text-align: center;
+}
+
 .screen-padding {
   padding: 0 10%;
 }
@@ -235,6 +252,10 @@ footer .container {
   /* gap: 1rem; */
 }
 
+.home .contact-info{
+  margin-top:30px ;
+  gap: 10px;
+}
 h1 {
   text-transform: capitalize;
   font-weight: 500;
@@ -469,13 +490,20 @@ h1 .bold {
   background-color: #00cccc;
 } */
 .project .row img {
-  border-radius: 25px;
+  border-radius: 8px;
 
   /* max-width: 500px;
   max-height: 400px;
   max-height: 300px; */
-  width: 450px;
-  height: 320px;
+  /* width: 450px; */
+  height: 380px;
+
+  /* .project .row img { */
+    /* border-radius: 25px; */
+    width: 625px;
+    /* height: auto; */
+    /* object-fit: cover;
+} */
 
   object-fit: cover;
 }

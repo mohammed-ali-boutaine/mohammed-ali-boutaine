@@ -26,7 +26,7 @@
     <!-- Custom stylesheets -->
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/media.css">
-    <link rel="stylesheet" href="./css/animation.css">
+    <!-- <link rel="stylesheet" href="./css/animation.css"> -->
     <link rel="stylesheet" href="./css/help-section.css">
     <link rel="stylesheet" href="./css/enhanced-skills.css">
 
@@ -51,7 +51,7 @@
 
     });
 </script>
-<script src="./js/skills.js"></script>
+<!-- <script src="./js/skills.js"></script> -->
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3RPF3X6WRY"></script>
@@ -84,7 +84,7 @@
                 <a href="#home">Home</a>
                 <a href="#services">Services</a>
                 <a href="#skills">Skills</a>
-                <a href="#project">Projects</a>
+                <a href="#projects">Projects</a>
                 <a href="#about">About</a>
                 <a href="#contact">Contact Me</a>
             </div>
@@ -146,6 +146,10 @@
                         <span class="sr-only">Email</span>
                     </a>
                 </section>
+                <div class="contact-info">
+                    <p>email : aliboutaine987@gmail.com </p>
+                    <p>Phone : +212-650246210 </p>
+                </div>
             </div>
             <div class="image">
                 <img src="./imgs/hero-image.svg" alt="Hero illustration of Mohammed Ali Boutaine">
@@ -157,7 +161,7 @@
             <section class="help-section slide-in-buttom" id="services">
                 <div class="container">
                     <div class="section-header">
-                        <h2 class="section-title">How Can I Help?</h2>
+                        <h2 class="section-title-white">How Can I Help?</h2>
                         <p class="section-subtitle">
                             I will help you with finding a solution and solve your problems.
                             We use proven design to create digital products that achieve your business goals.
@@ -179,10 +183,6 @@
                                     Custom web applications built with modern technologies and best practices for
                                     optimal performance.
                                 </p>
-                                <!-- <div class="service-cta">
-                        <a href="#contact" class="contact-btn" aria-label="Contact about Web Development">Contact</a>
-                        <a href="#projects" class="project-btn" aria-label="View Web Development Projects">View Projects</a>
-                    </div> -->
                             </div>
 
                             <div class="service-card">
@@ -199,10 +199,7 @@
                                     Beautiful, user-friendly interfaces that engage visitors and convert them into
                                     customers.
                                 </p>
-                                <!-- <div class="service-cta">
-                        <a href="#contact" class="contact-btn" aria-label="Contact about Web Design">Contact</a>
-                        <a href="#projects" class="project-btn" aria-label="View Web Design Projects">View Projects</a>
-                    </div> -->
+
                             </div>
 
                             <div class="service-card">
@@ -283,7 +280,7 @@
         <!-- Skills section -->
         <section id="skills" class="skills-container">
             <div class="skills-heading">
-                <h2>My Skills</h2>
+                <h2 class="section-title text-black">My Skills</h2>
                 <p>With a diverse range of technical skills, I deliver complete solutions from front-end interfaces to
                     back-end functionality.</p>
             </div>
@@ -302,9 +299,9 @@
                             architecture.
                         </div>
                     </div>
-
-                    <div class="skill-box">
-                        <i class="fa-solid fa-code"></i>
+                    <div class="skill-box" tabindex="0" role="button" aria-expanded="false"
+                        aria-label="TypeScript - Click for more information">
+                        <i class="fa-solid fa-code" aria-hidden="true"></i>
                         <h3>TypeScript</h3>
                         <div class="skill-description">
                             Strongly-typed JavaScript for scalable, maintainable applications with better developer
@@ -312,17 +309,18 @@
                         </div>
                     </div>
 
-                    <div class="skill-box">
-                        <i class="fa-brands fa-css3-alt"></i>
+                    <div class="skill-box" tabindex="0" role="button" aria-expanded="false"
+                        aria-label="Tailwind CSS - Click for more information">
+                        <i class="fa-brands fa-css3-alt" aria-hidden="true"></i>
                         <h3>Tailwind CSS</h3>
                         <div class="skill-description">
                             Utility-first CSS framework for building fast, responsive interfaces with consistent
                             styling.
                         </div>
                     </div>
-
-                    <div class="skill-box">
-                        <i class="fa-brands fa-js"></i>
+                    <div class="skill-box" tabindex="0" role="button" aria-expanded="false"
+                        aria-label="Next.js - Click for more information">
+                        <i class="fa-brands fa-js" aria-hidden="true"></i>
                         <h3>Next.js</h3>
                         <div class="skill-description">
                             React-based framework for building SEO-optimized, server-rendered, and statically generated
@@ -330,18 +328,18 @@
                         </div>
                     </div>
 
-
-
-                    <div class="skill-box">
-                        <i class="fa-brands fa-node-js"></i>
+                    <div class="skill-box" tabindex="0" role="button" aria-expanded="false"
+                        aria-label="Node.js - Click for more information">
+                        <i class="fa-brands fa-node-js" aria-hidden="true"></i>
                         <h3>Node.js</h3>
                         <div class="skill-description">
                             Backend development with asynchronous JavaScript using Express and modern RESTful APIs.
                         </div>
                     </div>
 
-                    <div class="skill-box">
-                        <i class="fa-brands fa-laravel"></i>
+                    <div class="skill-box" tabindex="0" role="button" aria-expanded="false"
+                        aria-label="Laravel - Click for more information">
+                        <i class="fa-brands fa-laravel" aria-hidden="true"></i>
                         <h3>Laravel</h3>
                         <div class="skill-description">
                             PHP framework for full-stack development with Eloquent ORM, Blade templating, and robust
@@ -349,8 +347,9 @@
                         </div>
                     </div>
 
-                    <div class="skill-box">
-                        <i class="fa-brands fa-java"></i>
+                    <div class="skill-box" tabindex="0" role="button" aria-expanded="false"
+                        aria-label="Java & Spring Boot - Click for more information">
+                        <i class="fa-brands fa-java" aria-hidden="true"></i>
                         <h3>Java & Spring Boot</h3>
                         <div class="skill-description">
                             Scalable backend services with Java and Spring Boot, using REST APIs, MVC, and dependency
@@ -358,24 +357,26 @@
                         </div>
                     </div>
 
-                    <div class="skill-box">
-                        <i class="fa-solid fa-database"></i>
+                    <div class="skill-box" tabindex="0" role="button" aria-expanded="false"
+                        aria-label="PostgreSQL - Click for more information">
+                        <i class="fa-solid fa-database" aria-hidden="true"></i>
                         <h3>PostgreSQL</h3>
                         <div class="skill-description">
                             Advanced SQL database design, data integrity, and indexing with PostgreSQL.
                         </div>
                     </div>
-
-                    <div class="skill-box">
-                        <i class="fa-solid fa-memory"></i>
+                    <div class="skill-box" tabindex="0" role="button" aria-expanded="false"
+                        aria-label="Redis - Click for more information">
+                        <i class="fa-solid fa-memory" aria-hidden="true"></i>
                         <h3>Redis</h3>
                         <div class="skill-description">
                             In-memory key-value store used for caching, queues, and real-time data access.
                         </div>
                     </div>
 
-                    <div class="skill-box">
-                        <i class="fa-brands fa-git-alt"></i>
+                    <div class="skill-box" tabindex="0" role="button" aria-expanded="false"
+                        aria-label="Git - Click for more information">
+                        <i class="fa-brands fa-git-alt" aria-hidden="true"></i>
                         <h3>Git</h3>
                         <div class="skill-description">
                             Version control, collaborative workflows, and Git branching strategies for efficient
@@ -383,16 +384,18 @@
                         </div>
                     </div>
 
-                    <div class="skill-box">
-                        <i class="fa-brands fa-docker"></i>
+                    <div class="skill-box" tabindex="0" role="button" aria-expanded="false"
+                        aria-label="Docker - Click for more information">
+                        <i class="fa-brands fa-docker" aria-hidden="true"></i>
                         <h3>Docker</h3>
                         <div class="skill-description">
                             Containerization for consistent development environments and scalable deployments.
                         </div>
                     </div>
 
-                    <div class="skill-box">
-                        <i class="fa-solid fa-bolt"></i>
+                    <div class="skill-box" tabindex="0" role="button" aria-expanded="false"
+                        aria-label="Vite - Click for more information">
+                        <i class="fa-solid fa-bolt" aria-hidden="true"></i>
                         <h3>Vite</h3>
                         <div class="skill-description">
                             Lightning-fast frontend tooling and hot-module replacement for a seamless dev experience.
@@ -409,7 +412,7 @@
 
             <!-- Detailed Skills by Category -->
             <div class="detailed-skills">
-                <h2>Technical Expertise</h2>
+                <h2 class="section-title">Technical Expertise</h2>
 
                 <div class="skill-categories">
 
@@ -487,14 +490,14 @@
 
         <!-- Project section -->
         <div class="projects-contain">
-            <section class="project" id="project">
-                <h1 class="bold"> My <span class="bold">Projects </span></h1>
+            <section class="project" id="projects">
+                <h2 class="section-title-white text-center"> My Projects</h2>
                 <div class="row">
                     <div class="image">
-                        <img src="./imgs/jetway-image.jpg" alt="">
+                        <img src="./imgs/airbooking.png" alt="">
                     </div>
                     <div class="content">
-                        <h2> <span class="bold">01- </span> Php website </h2>
+                        <h2> <span class="bold">01- </span> AirBooking - Reset and manage Hotels </h2>
 
                         <p>PHP website where you can sign in, log in, read content, and leave feedback.</p>
                         <p>Technologies</p>
