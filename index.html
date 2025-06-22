@@ -21,55 +21,156 @@
         content="I am Mohammed Ali Boutaine, a FullStack Developer. Explore my skills and projects. Contact me for collaboration.">
     <meta property="og:image" content="https://medali.online/imgs/logo.svg">
     <meta property="og:url" content="medali.online">
-    <meta property="og:url" content="https://medali.online">
+    <meta property="og:url" content="https://medali.online"> <!-- Critical CSS inlined to avoid render blocking -->
+    <style>
+        /* Critical CSS for above-the-fold content */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Roboto", sans-serif;
+            transition: all 0.3s ease;
+        }
 
-    <!-- Custom stylesheets -->
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/media.css">
-    <!-- <link rel="stylesheet" href="./css/animation.css"> -->
-    <link rel="stylesheet" href="./css/help-section.css">
-    <link rel="stylesheet" href="./css/enhanced-skills.css">
+        :root {
+            --bgc: #fff;
+            --text-color: #000;
+            --primary-color: #000000;
+            --main-color: #1e90ff;
+            --secondary-color: #00cccc;
+            --grey: #f2f2f2;
+            --nav-bgc: #e2e2e2;
+            --nav-color: black;
+        }
 
+        html {
+            font-size: 18px;
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+            overflow-x: hidden;
+        }
 
-    <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        a {
+            text-decoration: none;
+        }
+
+        /* Header styles for immediate display */
+        header {
+            background-color: #ffffff;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            z-index: 1000;
+            margin-bottom: 60px;
+            box-shadow: 0 2px 20px rgba(68, 68, 68, 0.1);
+        }
+
+        nav {
+            max-width: 1240px;
+            margin: auto;
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            text-transform: capitalize;
+        }
+
+        nav .logo a {
+            font-size: 1.5rem;
+            font-weight: 500;
+            font-family: "Lexend Deca", sans-serif;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        nav .logo img {
+            height: 30px;
+        }        /* Loading overlay styles */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+        
+        .loading-overlay.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+    
+
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+    <!-- Non-critical CSS loaded asynchronously -->
+    <link rel="stylesheet" href="./css/style.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="./css/style.css">
+    </noscript>
+    <!-- Font Awesome CDN - Preloaded to avoid render blocking -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" /> <!-- Google Fonts -->
+        crossorigin="anonymous" referrerpolicy="no-referrer" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer">
+    </noscript> <!-- Google Fonts - Optimized loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
+    <link rel="preload"
         href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Roboto:wght@300;400;500;700;900&display=swap"
-        rel="stylesheet">
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Roboto:wght@300;400;500;700;900&display=swap"
+            rel="stylesheet">
+    </noscript>
 </head>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var loadingOverlay = document.querySelector('.loading-overlay');
-
-        window.addEventListener('load', function () {
-            loadingOverlay.style.display = 'none';
-        })
-
-    });
-</script>
-<!-- <script src="./js/skills.js"></script> -->
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3RPF3X6WRY"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-3RPF3X6WRY');
-</script>
 
 
 
-<body>
+
+<body class="loading">
 
     <!-- Laoding animation  -->
     <div class="loading-overlay">
-        <h1></h1>
+        <div class="loading-spinner"></div>
     </div>
 
     <!-- navigation -->
@@ -663,8 +764,49 @@
                 <p>Made By <b>Mohammed Ali Boutaine</b></p>
             </div>
         </div>
-    </footer>
-    <script src="./js.js"></script>
+    </footer> <!-- Script to load non-critical CSS and handle loading animation -->
+    <script>
+        /* Load CSS files asynchronously */
+        function loadCSS(href) {
+            const link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = href;
+            document.head.appendChild(link);
+        }
+
+        // Handle loading overlay immediately
+        document.addEventListener('DOMContentLoaded', function () {            const loadingOverlay = document.querySelector('.loading-overlay');
+            
+            // Add loading class to body when page is loading
+            document.body.classList.add('loading');
+
+            // Load non-critical CSS
+            loadCSS('./css/media.css');
+            loadCSS('./css/help-section.css');
+            loadCSS('./css/enhanced-skills.css');
+
+            // Hide loading overlay when content is ready
+            setTimeout(function () {
+                loadingOverlay.classList.add('hidden');
+                // Remove loading class to restore scrollbar
+                document.body.classList.remove('loading');
+            }, 500); // Short delay to ensure animation is visible
+        });
+
+        // Backup for older browsers - hide loading overlay on window.load
+        window.addEventListener('load', function () {
+            const loadingOverlay = document.querySelector('.loading-overlay');
+            if (loadingOverlay && !loadingOverlay.classList.contains('hidden')) {
+                loadingOverlay.classList.add('hidden');
+                // Remove loading class to restore scrollbar
+                document.body.classList.remove('loading');
+            }
+        });
+    </script>
+
+    <!-- Load site's main JavaScript -->
+    <script src="./js.js" defer></script>
+    <!-- <script src="./js/skills.js" defer></script> -->
 </body>
 
 </html>

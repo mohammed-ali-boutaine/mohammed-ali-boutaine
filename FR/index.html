@@ -28,26 +28,162 @@
   <meta name="twitter:description"
     content="Je suis Mohammed Ali Boutaine, un développeur FullStack. Explorez mes compétences et projets. Contactez-moi pour une collaboration." />
   <meta name="twitter:image" content="URL_DE_VOTRE_IMAGE_SOCIALE" />
-  <!-- Feuilles de style personnalisées -->
-  <link rel="stylesheet" href="../css/style.css" />
-  <link rel="stylesheet" href="../css/media.css" />
-  <link rel="stylesheet" href="../css/help-section.css" />
-  <link rel="stylesheet" href="../css/enhanced-skills.css" />
+  <!-- CSS critique intégré pour éviter le blocage de rendu -->
+  <style>
+    /* CSS critique pour le contenu visible dès le chargement */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Roboto", sans-serif;
+      transition: all 0.3s ease;
+    }
 
-  <!-- CDN de Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    :root {
+      --bgc: #fff;
+      --text-color: #000;
+      --primary-color: #000000;
+      --main-color: #1e90ff;
+      --secondary-color: #00cccc;
+      --grey: #f2f2f2;
+      --nav-bgc: #e2e2e2;
+      --nav-color: black;
+    }
+
+    html {
+      font-size: 18px;
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* Styles d'en-tête pour l'affichage immédiat */
+    header {
+      background-color: #ffffff;
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      z-index: 1000;
+      margin-bottom: 60px;
+      box-shadow: 0 2px 20px rgba(68, 68, 68, 0.1);
+    }
+
+    nav {
+      max-width: 1240px;
+      margin: auto;
+      width: 100%;
+      height: 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text-color);
+      text-transform: capitalize;
+    }
+
+    nav .logo a {
+      font-size: 1.5rem;
+      font-weight: 500;
+      font-family: "Lexend Deca", sans-serif;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    nav .logo img {
+      height: 30px;
+    }
+
+    /* Styles de l'overlay de chargement */
+    .loading-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 0.5s ease, visibility 0.5s ease;
+    }
+
+    .loading-overlay.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    /* Cacher la barre de défilement pendant le chargement */
+    body.loading {
+      overflow: hidden;
+    }
+
+    .loading-spinner {
+      width: 50px;
+      height: 50px;
+      border: 5px solid #f3f3f3;
+      border-top: 5px solid var(--primary-color);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+
+  <!-- CSS non critique chargé de façon asynchrone -->
+  <link rel="stylesheet" href="../css/style.css" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="../css/style.css">
+  </noscript>
+
+  <!-- Font Awesome CDN - Préchargé pour éviter le blocage de rendu -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style"
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    crossorigin="anonymous" referrerpolicy="no-referrer" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer">
+  </noscript>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
+  <!-- Google Fonts - Chargement optimisé -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload"
     href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Roboto:wght@300;400;500;700;900&display=swap"
-    rel="stylesheet" />
+    as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet">
+  </noscript>
 </head>
 
-<body>
+<body class="loading">
+  <!-- Animation de chargement -->
+  <div class="loading-overlay">
+    <div class="loading-spinner"></div>
+  </div>
+
   <header>
     <nav class="nav">
       <div class="logo">
@@ -497,9 +633,49 @@
         <p>Made By <b>Mohammed ali Boutaine</b></p>
       </div>
     </div>
-  </footer>
-  <script src="../js.js"></script>
-  <script src="../js/skills.js"></script>
+  </footer> <!-- Script pour charger le CSS non critique -->
+  <script>
+    /* Chargement asynchrone des fichiers CSS */
+    function loadCSS(href) {
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = href;
+      document.head.appendChild(link);
+    }
+    // Gérer l'overlay de chargement immédiatement
+    document.addEventListener('DOMContentLoaded', function () {
+      const loadingOverlay = document.querySelector('.loading-overlay');
+
+      // Ajouter la classe loading au body pendant le chargement
+      document.body.classList.add('loading');
+
+      // Chargement du CSS non critique
+      loadCSS('../css/media.css');
+      loadCSS('../css/help-section.css');
+      loadCSS('../css/enhanced-skills.css');
+
+      // Cacher l'overlay de chargement quand le contenu est prêt
+      setTimeout(function () {
+        loadingOverlay.classList.add('hidden');
+        // Supprimer la classe loading pour restaurer la barre de défilement
+        document.body.classList.remove('loading');
+      }, 500); // Court délai pour s'assurer que l'animation est visible
+    });
+
+    // Sécurité pour les navigateurs plus anciens - cacher l'overlay au chargement de la fenêtre
+    window.addEventListener('load', function () {
+      const loadingOverlay = document.querySelector('.loading-overlay');
+      if (loadingOverlay && !loadingOverlay.classList.contains('hidden')) {
+        loadingOverlay.classList.add('hidden');
+        // Supprimer la classe loading pour restaurer la barre de défilement
+        document.body.classList.remove('loading');
+      }
+    });
+  </script>
+
+  <!-- Chargement des scripts JavaScript principaux -->
+  <script src="../js.js" defer></script>
+  <script src="../js/skills.js" defer></script>
 </body>
 
 </html>
