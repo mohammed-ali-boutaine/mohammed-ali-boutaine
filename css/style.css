@@ -27,6 +27,7 @@
   --bgc: #fff;
   --text-color: #000;
 
+  --primary-color: #000000;
   --main-color: #1e90ff;
   --secondary-color: #00cccc;
   --grey: #f2f2f2;
@@ -42,25 +43,17 @@ html {
   scroll-padding-top: 100px;
   overflow-x: hidden;
 }
-/* body {
-  overflow-x: hidden;
-  box-sizing: border-box;
-} */
 
-/* Hide scroll bars for WebKit-based browsers */
-/* ::-webkit-scrollbar {
-  display: none;
-} */
-
-/* Re-enable scroll bars for body in WebKit-based browsers */
-/* body::-webkit-scrollbar {
-  display: block;
-} */
 
 a {
   text-decoration: none;
 }
 
+h2{
+  font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
 .screen-padding {
   padding: 0 10%;
 }
@@ -101,7 +94,7 @@ nav.shrink {
 
 nav.shrink .cv a {
   font-size: 20px;
-  background-color: #000;
+  background-color: var(--primary-color);
   color: white;
   padding: 3px 30px;
   font-weight: 400;
@@ -162,7 +155,7 @@ nav .navbar a:before {
   bottom: 5px;
   left: 0;
   border-radius: 28px;
-  background-color: #000; /* Set the color of the line */
+  background-color: var(--primary-color); /* Set the color of the line */
   transform: scaleX(0); /* Initially hide the line */
   transform-origin: bottom right;
   transition: transform 0.4s ease; /* Add a smooth transition effect */
@@ -178,7 +171,7 @@ nav .navbar a:hover:before {
 
 nav .cv a {
   font-size: 22px;
-  background-color: #000;
+  background-color: var(--primary-color);
   color: white;
   padding: 5px 30px;
   font-weight: 500;
@@ -193,8 +186,8 @@ nav .cv a {
 nav .cv a:hover {
   cursor: url(../imgs/cursor.svg) 1 1, pointer;
   background-color: transparent;
-  color: black;
-  border: 2px solid black;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
   /* padding: 5px 27px; */
 
   /* word-spacing: 6px; */
@@ -243,27 +236,11 @@ footer .container {
 }
 
 h1 {
-  /* text-align: center; */
   text-transform: capitalize;
   font-weight: 500;
   font-size: 1.4rem;
 }
-/* h1 .outline {
-  color: transparent;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: black;
 
-  font-weight: 800;
-  font-size: 1.8rem;
-} */
-h2 .outline {
-  color: transparent;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: black;
-
-  font-weight: 600;
-  font-size: 1.5rem;
-}
 h1 .bold {
   font-size: 1.6rem;
   font-weight: 600;
@@ -271,7 +248,6 @@ h1 .bold {
 }
 .home .typing {
   margin: 10px 0px;
-  /* text-decoration: underline; */
 }
 
 .cta-buttons {
@@ -289,28 +265,30 @@ h1 .bold {
   border: 2px solid black;
 }
 
-/* Primary Button: black background, white text */
+/* Primary Button: purple background, white text */
 .cta-buttons .btn-primary {
-  background-color: black;
+  background-color: var(--primary-color);
   color: white;
+  border: 2px solid var(--primary-color);
 }
 
 .cta-buttons .btn-primary:hover {
   background-color: white;
-  color: black;
-  border: 2px solid white;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
 }
 
-/* Secondary Button: white background, black text */
+/* Secondary Button: white background, purple text */
 .cta-buttons .btn-secondary {
   background-color: white;
-  color: black;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
 }
 
 .cta-buttons .btn-secondary:hover {
-  background-color: black;
+  background-color: var(--primary-color);
   color: white;
-  border: 2px solid white;
+  border: 2px solid var(--primary-color);
 }
 #typing-text {
   /* display: inline-block; */
@@ -363,9 +341,9 @@ h1 .bold {
   padding: 5px;
   text-align: center;
   border-radius: 5px;
-  border: 2px solid rgb(255, 255, 255);
+  border: 2px solid var(--primary-color);
   color: #ffffff;
-  background-color: rgb(0, 0, 0);
+  background-color: var(--primary-color);
 }
 
 /* skkils section  */
@@ -606,14 +584,13 @@ h1 .bold {
   padding: 10px;
   border-radius: 5px;
   outline: none;
-  border: 2px solid black;
-  background-color: #000;
+  border: 2px solid var(--primary-color);
+  background-color: var(--primary-color);
   color: white;
 }
 .contact .row form button:hover {
   cursor: url(../imgs/cursor.svg) 1 1, pointer;
-
-  color: #000;
+  color: var(--primary-color);
   background-color: white;
 }
 

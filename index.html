@@ -6,67 +6,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohammed Ali Boutaine - FullStack Developer</title>
     <link rel="icon" href="./imgs/logo.svg" type="image/svg+xml">
-        <link rel="shortcut icon" href="./imgs/logo.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="./imgs/logo.svg" type="image/svg+xml">
 
     <!-- Meta tags for SEO -->
-    <meta name="description" content="I am Mohammed Ali Boutaine, a FullStack Developer. Explore my skills and projects. Contact me for collaboration.">
-    <meta name="keywords" content="FullStack Developer, Web Developer, Portfolio, HTML, CSS, JavaScript, React, PHP, Laravel, MySQL, MongoDB, Git, GitHub, Figma, mohammed ali boutaine, medali, medali.online, mohammed ali boutaine portfolio">
+    <meta name="description"
+        content="I am Mohammed Ali Boutaine, a FullStack Developer. Explore my skills and projects. Contact me for collaboration.">
+    <meta name="keywords"
+        content="FullStack Developer, Web Developer, Portfolio, HTML, CSS, JavaScript, React, PHP, Laravel, MySQL, MongoDB, Git, GitHub, Figma, mohammed ali boutaine, medali, medali.online, mohammed ali boutaine portfolio">
     <meta name="author" content="Mohammed Ali Boutaine">
 
     <!-- Open Graph meta tags for better social sharing -->
     <meta property="og:title" content="Mohammed Ali Boutaine - FullStack Developer">
-    <meta property="og:description" content="I am Mohammed Ali Boutaine, a FullStack Developer. Explore my skills and projects. Contact me for collaboration.">
+    <meta property="og:description"
+        content="I am Mohammed Ali Boutaine, a FullStack Developer. Explore my skills and projects. Contact me for collaboration.">
     <meta property="og:image" content="https://medali.online/imgs/logo.svg">
     <meta property="og:url" content="medali.online">
     <meta property="og:url" content="https://medali.online">
 
     <!-- Custom stylesheets -->
-
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/media.css">
     <link rel="stylesheet" href="./css/animation.css">
+    <link rel="stylesheet" href="./css/help-section.css">
+    <link rel="stylesheet" href="./css/enhanced-skills.css">
 
 
     <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <!-- Google Fonts -->    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Roboto:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
 </head>
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
         var loadingOverlay = document.querySelector('.loading-overlay');
-      
-        window.addEventListener('load', function() {
-            // setTimeout( 
-                // ()=>{
-                loadingOverlay.style.display = 'none';
-            //   } ,950);
-            })
-        
-      });
 
-    
+        window.addEventListener('load', function () {
+            loadingOverlay.style.display = 'none';
+        })
 
+    });
 </script>
+<script src="./js/skills.js"></script>
 
-    <!-- Google tag (gtag.js) -->
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3RPF3X6WRY"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-3RPF3X6WRY');
+    gtag('config', 'G-3RPF3X6WRY');
 </script>
 
-    
+
 
 <body>
+
+    <!-- Laoding animation  -->
     <div class="loading-overlay">
         <h1></h1>
-      </div>
-
-
+    </div>
 
     <!-- navigation -->
     <header>
@@ -74,15 +78,11 @@
             <div class="logo">
                 <a href="/">
                     <img src="./imgs/logo.svg" id="logo-box" class="main-logo" alt="">
-                    <!-- <img src="./imgs/logo-white.svg" class="eye" alt="" srcset=""> -->
                     Portfolio</a>
             </div>
-
-
-    
-
             <div class="navbar">
                 <a href="#home">Home</a>
+                <a href="#services">Services</a>
                 <a href="#skills">Skills</a>
                 <a href="#project">Projects</a>
                 <a href="#about">About</a>
@@ -90,7 +90,8 @@
             </div>
 
             <div class="cv">
-                <a href="/PDF/" target="_blank" class="active after-animation">My Resume <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="/PDF/" target="_blank" class="active after-animation">My Resume <i
+                        class="fa-solid fa-arrow-right"></i></a>
             </div>
 
             <div class="menu">
@@ -100,165 +101,444 @@
         </nav>
     </header>
 
-    <!-- Content -->
+    <!-- Main content -->
     <main>
 
         <!-- Hero section -->
- <section class="home" id="home">
-  <div class="content">
-    <h1>Hello, I'm <span class="bold">Mohammed Ali Boutaine</span></h1>
-    <h1>A <span class="bold">FullStack</span> <span class="outline">Developer</span></h1>
+        <section class="home" id="home">
+            <div class="content">
+                <h1>Hello, I'm <span class="bold">Mohammed Ali Boutaine</span></h1>
+                <h1>A <span class="bold">FullStack</span> <span class="outline">Developer</span></h1>
 
-    <h1 class="typing">
-      <span class="outline">I Can</span> 
-      <span id="typing-text" class="bold"></span>
-    </h1>
+                <h1 class="typing">
+                    <span class="outline">I Can</span>
+                    <span id="typing-text" class="bold"></span>
+                </h1>
 
-    <p class="description">
-      With 4 years of experience in web development, I build fast, modern, and responsive websites. I create clean designs and have completed many fullstack projects using tools like React, Laravel, and Tailwind CSS.
-    </p>
+                <p class="description">
+                    With 4 years of experience in web development, I build fast, modern, and responsive websites. I
+                    create clean designs and have completed many fullstack projects using tools like React, Laravel, and
+                    Tailwind CSS.
+                </p>
 
-   <div class="cta-buttons">
-  <a href="#projects" class="btn btn-primary">View Projects</a>
-  <a href="#contact" class="btn btn-secondary">Let's Work Together</a>
-</div>        <section class="social-links">
-            <a href="https://github.com/mohammed-ali-boutaine" target="_blank" aria-label="Visit my GitHub profile">
-                <i class="fa-brands fa-github" aria-hidden="true"></i>
-                <span class="sr-only">GitHub</span>
-            </a>
-            <a href="https://www.linkedin.com/in/mohammed-ali-boutaine/" target="_blank" aria-label="Connect with me on LinkedIn">
-                <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-                <span class="sr-only">LinkedIn</span>
-            </a>
-            <a href="https://www.instagram.com/ali_boutaine" target="_blank" aria-label="Follow me on Instagram">
-                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-                <span class="sr-only">Instagram</span>
-            </a>
-            <a href="mailto:aliboutaine987@gmail.com" target="_blank" aria-label="Send me an email">
-                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-                <span class="sr-only">Email</span>
-            </a>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Let's Work Together</a>
+                </div>
+                <section class="social-links">
+                    <a href="https://github.com/mohammed-ali-boutaine" target="_blank"
+                        aria-label="Visit my GitHub profile">
+                        <i class="fa-brands fa-github" aria-hidden="true"></i>
+                        <span class="sr-only">GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/mohammed-ali-boutaine/" target="_blank"
+                        aria-label="Connect with me on LinkedIn">
+                        <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                        <span class="sr-only">LinkedIn</span>
+                    </a>
+                    <a href="https://www.instagram.com/ali.boutaine" target="_blank"
+                        aria-label="Follow me on Instagram">
+                        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                        <span class="sr-only">Instagram</span>
+                    </a>
+                    <a href="mailto:aliboutaine987@gmail.com" target="_blank" aria-label="Send me an email">
+                        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                        <span class="sr-only">Email</span>
+                    </a>
+                </section>
+            </div>
+            <div class="image">
+                <img src="./imgs/hero-image.svg" alt="Hero illustration of Mohammed Ali Boutaine">
+            </div>
         </section>
-  </div>
 
-  <div class="image">
-    <img src="./imgs/hero-image.svg" alt="Hero illustration of Mohammed Ali Boutaine">
-  </div>
-</section>
+        <!-- How Can I Help Section -->
+        <div class="services-container">
+            <section class="help-section slide-in-buttom" id="services">
+                <div class="container">
+                    <div class="section-header">
+                        <h2 class="section-title">How Can I Help?</h2>
+                        <p class="section-subtitle">
+                            I will help you with finding a solution and solve your problems.
+                            We use proven design to create digital products that achieve your business goals.
+                        </p>
+                    </div>
 
+                    <div class="services-content-wrapper">
+                        <!-- Left side - Vertical Services -->
+                        <div class="services-sidebar">
+                            <div class="service-card">
+                                <div class="service-icon">
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                        <polyline points="9,22 9,12 15,12 15,22"></polyline>
+                                    </svg>
+                                </div>
+                                <h3 class="service-title">Web Development</h3>
+                                <p class="service-description">
+                                    Custom web applications built with modern technologies and best practices for
+                                    optimal performance.
+                                </p>
+                                <!-- <div class="service-cta">
+                        <a href="#contact" class="contact-btn" aria-label="Contact about Web Development">Contact</a>
+                        <a href="#projects" class="project-btn" aria-label="View Web Development Projects">View Projects</a>
+                    </div> -->
+                            </div>
 
+                            <div class="service-card">
+                                <div class="service-icon">
+                                    <svg viewBox="0 0 24 24">
+                                        <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                        <path d="M10 4v4"></path>
+                                        <path d="M14 4v4"></path>
+                                        <path d="M4 8h16"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="service-title">Web Design</h3>
+                                <p class="service-description">
+                                    Beautiful, user-friendly interfaces that engage visitors and convert them into
+                                    customers.
+                                </p>
+                                <!-- <div class="service-cta">
+                        <a href="#contact" class="contact-btn" aria-label="Contact about Web Design">Contact</a>
+                        <a href="#projects" class="project-btn" aria-label="View Web Design Projects">View Projects</a>
+                    </div> -->
+                            </div>
 
+                            <div class="service-card">
+                                <div class="service-icon">
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                                        <path d="M2 17l10 5 10-5"></path>
+                                        <path d="M2 12l10 5 10-5"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="service-title">Landing Pages</h3>
+                                <p class="service-description">
+                                    High-converting landing pages designed to maximize your marketing campaigns and
+                                    business growth.
+                                </p>
+                                <!-- <div class="service-cta">
+                        <a href="#contact" class="contact-btn" aria-label="Contact about Landing Pages">Contact</a>
+                        <a href="#projects" class="project-btn" aria-label="View Landing Page Projects">View Projects</a>
+                    </div> -->
+                            </div>
 
+                            <div class="service-card">
+                                <div class="service-icon">
+                                    <svg viewBox="0 0 24 24">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <path d="M8 12h8"></path>
+                                        <path d="M12 8v8"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="service-title">WordPress</h3>
+                                <p class="service-description">
+                                    Custom WordPress themes and plugins, content management solutions tailored to your
+                                    needs.
+                                </p>
+                                <!-- <div class="service-cta">
+                        <a href="#contact" class="contact-btn" aria-label="Contact about WordPress">Contact</a>
+                        <a href="#projects" class="project-btn" aria-label="View WordPress Projects">View Projects</a>
+                    </div> -->
+                            </div>
+                        </div>
 
+                        <!-- Right side - Image and Text with Stats -->
+                        <div class="about-content">
+                            <div class="about-image">
+                                <img src="./imgs/about-image.svg" alt="About Me">
+                            </div>
+                            <div class="about-text">
+                                <h3>Dedicated to Quality and Excellence</h3>
+                                <p>I'm a passionate web developer focusing on creating modern and functional websites
+                                    and applications. With expertise in both front-end and back-end development, I
+                                    deliver comprehensive solutions for businesses of all sizes.</p>
+                                <p>My goal is to help businesses establish a strong online presence through
+                                    well-designed, user-friendly websites that convert visitors into customers.</p>
+
+                                <div class="stats-section">
+                                    <div class="stat-item">
+                                        <span class="stat-number">20+</span>
+                                        <span class="stat-label">Projects Completed</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-number">4+</span>
+                                        <span class="stat-label">Years Coding and Building</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-number">5+</span>
+                                        <span class="stat-label"> Team Projects</span>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
 
 
         <!-- Skills section -->
-        <section id="skills" class="skills">
-            <h1>My <span class="outline bold">Skills</span></h1>
-            <div class="row">
-                <div class="box">
-                    <i class="fa-brands fa-html5"></i>
-                    <h3>HTML</h3>
-                </div>
-                <div class="box">
-                    <i class="fa-brands fa-css3-alt"></i>
-                    <h3>CSS</h3>
-                </div>
-                <div class="box">
-                    <i class="fa-brands fa-js"></i>
-                    <h3>JavaScript</h3>
-                </div>
-                <div class="box">
-                    <i class="fa-brands fa-bootstrap"></i>
-                    <h3>Bootstrap</h3>
-                </div>
-                <div class="box">
-                    <i class="fa-brands fa-react"></i>
-                    <h3>React</h3>
-                </div>
-                <div class="box">
-                    <i class="fa-brands fa-php"></i>
-                    <h3>PHP</h3>
-                </div>
-                <div class="box">
-                    <i class="fa-brands fa-laravel"></i>
-                    <h3>Laravel</h3>
-                </div>
-                <div class="box database">
-                    <i class="fa-solid fa-database"></i>
-                    <h3>MySQL MongoDB</h3>
-                </div>
-                <div class="box">
-                    <i class="fa-brands fa-github"></i>
-                    <h3>Git & GitHub</h3>
-                </div>
-                <div class="box">
-                    <i class="fa-brands fa-figma"></i>
-                    <h3>Figma</h3>
+        <section id="skills" class="skills-container">
+            <div class="skills-heading">
+                <h2>My Skills</h2>
+                <p>With a diverse range of technical skills, I deliver complete solutions from front-end interfaces to
+                    back-end functionality.</p>
+            </div>
+
+            <!-- Primary Skills with Icons and Descriptions -->
+            <!-- Primary Skills with Icons and Descriptions -->
+            <div class="primary-skills">
+                <div class="row">
+
+                    <div class="skill-box" tabindex="0" role="button" aria-expanded="false"
+                        aria-label="React - Click for more information">
+                        <i class="fa-brands fa-react" aria-hidden="true"></i>
+                        <h3>React</h3>
+                        <div class="skill-description">
+                            Building dynamic UIs with modern React features like hooks, context, and component
+                            architecture.
+                        </div>
+                    </div>
+
+                    <div class="skill-box">
+                        <i class="fa-solid fa-code"></i>
+                        <h3>TypeScript</h3>
+                        <div class="skill-description">
+                            Strongly-typed JavaScript for scalable, maintainable applications with better developer
+                            tooling.
+                        </div>
+                    </div>
+
+                    <div class="skill-box">
+                        <i class="fa-brands fa-css3-alt"></i>
+                        <h3>Tailwind CSS</h3>
+                        <div class="skill-description">
+                            Utility-first CSS framework for building fast, responsive interfaces with consistent
+                            styling.
+                        </div>
+                    </div>
+
+                    <div class="skill-box">
+                        <i class="fa-brands fa-js"></i>
+                        <h3>Next.js</h3>
+                        <div class="skill-description">
+                            React-based framework for building SEO-optimized, server-rendered, and statically generated
+                            apps.
+                        </div>
+                    </div>
+
+
+
+                    <div class="skill-box">
+                        <i class="fa-brands fa-node-js"></i>
+                        <h3>Node.js</h3>
+                        <div class="skill-description">
+                            Backend development with asynchronous JavaScript using Express and modern RESTful APIs.
+                        </div>
+                    </div>
+
+                    <div class="skill-box">
+                        <i class="fa-brands fa-laravel"></i>
+                        <h3>Laravel</h3>
+                        <div class="skill-description">
+                            PHP framework for full-stack development with Eloquent ORM, Blade templating, and robust
+                            routing.
+                        </div>
+                    </div>
+
+                    <div class="skill-box">
+                        <i class="fa-brands fa-java"></i>
+                        <h3>Java & Spring Boot</h3>
+                        <div class="skill-description">
+                            Scalable backend services with Java and Spring Boot, using REST APIs, MVC, and dependency
+                            injection.
+                        </div>
+                    </div>
+
+                    <div class="skill-box">
+                        <i class="fa-solid fa-database"></i>
+                        <h3>PostgreSQL</h3>
+                        <div class="skill-description">
+                            Advanced SQL database design, data integrity, and indexing with PostgreSQL.
+                        </div>
+                    </div>
+
+                    <div class="skill-box">
+                        <i class="fa-solid fa-memory"></i>
+                        <h3>Redis</h3>
+                        <div class="skill-description">
+                            In-memory key-value store used for caching, queues, and real-time data access.
+                        </div>
+                    </div>
+
+                    <div class="skill-box">
+                        <i class="fa-brands fa-git-alt"></i>
+                        <h3>Git</h3>
+                        <div class="skill-description">
+                            Version control, collaborative workflows, and Git branching strategies for efficient
+                            development.
+                        </div>
+                    </div>
+
+                    <div class="skill-box">
+                        <i class="fa-brands fa-docker"></i>
+                        <h3>Docker</h3>
+                        <div class="skill-description">
+                            Containerization for consistent development environments and scalable deployments.
+                        </div>
+                    </div>
+
+                    <div class="skill-box">
+                        <i class="fa-solid fa-bolt"></i>
+                        <h3>Vite</h3>
+                        <div class="skill-description">
+                            Lightning-fast frontend tooling and hot-module replacement for a seamless dev experience.
+                        </div>
+                    </div>
+
+
+
+
+
                 </div>
             </div>
+
+
+            <!-- Detailed Skills by Category -->
+            <div class="detailed-skills">
+                <h2>Technical Expertise</h2>
+
+                <div class="skill-categories">
+
+                    <div class="skill-category">
+                        <h3>Front-end</h3>
+                        <ul>
+                            <li>HTML5 & CSS3, SEO </li>
+                            <li>Tailwind CSS</li>
+                            <li>JavaScript (ES6+) & TypeScript</li>
+                            <li>React.js & Redux</li>
+                            <li>Next.js</li>
+                            <li>Astro</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Back-end</h3>
+                        <ul>
+                            <li>PHP & Laravel</li>
+                            <li>Node.js & Express.js</li>
+                            <li>Java & Spring Boot</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Database</h3>
+                        <ul>
+                            <li>Potgresql</li>
+                            <li>MySQL</li>
+                            <li>MongoDB</li>
+                            <li>Redis</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Project Management</h3>
+                        <ul>
+                            <li>Agile Methodologies (Scrum, Kanban)</li>
+                            <li>Version Control (Git)</li>
+                            <li>Project Planning & Documentation</li>
+                            <li>Team Collaboration</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Architecture & Design Patterns</h3>
+                        <ul>
+                            <li>MVC Architecture</li>
+                            <li>RESTful API Design</li>
+                            <li>Object-Oriented Programming (OOP)</li>
+                            <li>SOLID Principles</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Development Tools</h3>
+                        <ul>
+                            <li>GitHub & GitLab</li>
+                            <li>Docker</li>
+                            <li>Figma</li>
+                            <li>Vite</li>
+                            <li>Jira</li>
+                            <li>Vercel</li>
+                            <li>Postman</li>
+                        </ul>
+                    </div>
+
+
+                </div>
+            </div>
+
+
         </section>
 
 
-
-
-
-
-
-
-        
         <!-- Project section -->
         <div class="projects-contain">
-        <section class="project" id="project">
-            <h1 class="bold"> My <span class="bold">Projects </span></h1>
-            <div class="row">
-                <div class="image">
-                    <img src="./imgs/jetway-image.jpg" alt="">
+            <section class="project" id="project">
+                <h1 class="bold"> My <span class="bold">Projects </span></h1>
+                <div class="row">
+                    <div class="image">
+                        <img src="./imgs/jetway-image.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h2> <span class="bold">01- </span> Php website </h2>
+
+                        <p>PHP website where you can sign in, log in, read content, and leave feedback.</p>
+                        <p>Technologies</p>
+
+                        <ul>
+                            <li>HTML CSS Js</li>
+                            <li>Php - MySQL</li>
+                        </ul>
+                        <p>
+                            <a href="https://github.com/mohammed-ali-boutaine/jetway" target="_blank">View code source
+                                <i class="fa-solid fa-arrow-right"></i></a>
+                        </p>
+
+                    </div>
                 </div>
-                <div class="content">
-                    <h2> <span class="bold">01- </span> Php website </h2>
 
-                    <p>PHP website where you can sign in, log in, read content, and leave feedback.</p>
-                    <p>Technologies</p>
 
-                    <ul>
-                        <li>HTML CSS Js</li>
-                        <li>Php - MySQL</li>
-                    </ul>
-                    <p>
-                        <a href="https://github.com/mohammed-ali-boutaine/jetway" target="_blank">View code source <i class="fa-solid fa-arrow-right"></i></a>
-                    </p>     
+                <div class="row">
 
+                    <div class="content">
+                        <h2> <span class="bold">02- </span> GUI Python System</h2>
+                        <p>Student Mangement system where you can display ,add,delete,serach for student </p>
+                        <p>Technologies</p>
+
+                        <ul>
+                            <li>Python</li>
+                            <li>Python Tkinter</li>
+                        </ul>
+                        <p>
+                            <a href="https://github.com/mohammed-ali-boutaine/python-poo-tkinter">View code source <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </p>
+                    </div>
+                    <div class="image">
+                        <img src="./imgs/gestion-etudiant-tkinter.png" alt="">
+                    </div>
                 </div>
-            </div>
 
-
-            <div class="row">
-          
-                <div class="content">
-                    <h2> <span class="bold">02- </span> GUI Python System</h2>
-                    <p>Student Mangement system where you can display ,add,delete,serach for student </p>
-                    <p>Technologies</p>
-
-                    <ul>
-                        <li>Python</li>
-                        <li>Python Tkinter</li>
-                    </ul>
-                    <p>
-                        <a href="https://github.com/mohammed-ali-boutaine/python-poo-tkinter">View code source <i class="fa-solid fa-arrow-right"></i></a>
-                    </p>                 
-                </div>
-                <div class="image">
-                    <img src="./imgs/gestion-etudiant-tkinter.png" alt="">
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="image">
-                    <img src="./imgs/todolist.png" alt="">
-                </div>
-                <div class="content">
-                    <h2> <span class="bold">03- </span>React TodoList (using react cdn)</h2>
+                <div class="row">
+                    <div class="image">
+                        <img src="./imgs/todolist.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h2> <span class="bold">03- </span>React TodoList (using react cdn)</h2>
                         <p>task Management where tou can add delete modify tasks</p>
                         <p>Technologies</p>
 
@@ -267,60 +547,49 @@
                             <li>React</li>
                         </ul>
                         <p>
-                            <a href="https://github.com/mohammed-ali-boutaine/todoList-react-browser" target="_blank">View code source <i class="fa-solid fa-arrow-right"></i></a>
-                            <a href="https://mohammed-ali-boutaine.github.io/todoList-react-browser/" target="_blank">Live</a>
-                        </p>        
+                            <a href="https://github.com/mohammed-ali-boutaine/todoList-react-browser"
+                                target="_blank">View code source <i class="fa-solid fa-arrow-right"></i></a>
+                            <a href="https://mohammed-ali-boutaine.github.io/todoList-react-browser/"
+                                target="_blank">Live</a>
+                        </p>
 
 
 
-                </div>
-            </div>
-
-
-            <div class="row">
-          
-                <div class="content">
-                    <h2> <span class="bold">03- </span> Drum Soundes</h2>
-                    <p></p>
-                    <p>Technologies</p>
-                    <ul>
-                        <li>HTML CSS</li>
-                        <li>JavaScript</li>
-                    </ul>
-                    <p>
-                        <a href="https://github.com/mohammed-ali-boutaine/drum-sounds" target="_blank">View code source <i class="fa-solid fa-arrow-right"></i></a>
-                        <a href="https://mohammed-ali-boutaine.github.io/drum-sounds/" target="_blank">Live</a>
-                    </p>                
+                    </div>
                 </div>
 
-                <div class="image">
-                    <img src="./imgs/drum-sound.png" alt="">
+
+                <div class="row">
+
+                    <div class="content">
+                        <h2> <span class="bold">03- </span> Drum Soundes</h2>
+                        <p></p>
+                        <p>Technologies</p>
+                        <ul>
+                            <li>HTML CSS</li>
+                            <li>JavaScript</li>
+                        </ul>
+                        <p>
+                            <a href="https://github.com/mohammed-ali-boutaine/drum-sounds" target="_blank">View code
+                                source <i class="fa-solid fa-arrow-right"></i></a>
+                            <a href="https://mohammed-ali-boutaine.github.io/drum-sounds/" target="_blank">Live</a>
+                        </p>
+                    </div>
+
+                    <div class="image">
+                        <img src="./imgs/drum-sound.png" alt="">
+                    </div>
                 </div>
-            </div>
 
 
 
 
 
-        </section>
-    </div>
+            </section>
+        </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <!-- About Section  -->
 
         <section class="about" id="about">
             <div class="image-div">
@@ -337,7 +606,7 @@
                     des applications. J'adore créer de nouveaux designs et mettre en
                     pratique mes compétences pour développer des solutions web
                     innovantes.
-                                    </p>
+                </p>
         </section>
 
         <!-- Contact section -->
@@ -355,7 +624,8 @@
                             <a href="https://github.com/mohammed-ali-boutaine" target="_blank" aria-label="GitHub">
                                 <i class="fa-brands fa-github" aria-hidden="true"></i>
                             </a>
-                            <a href="https://www.linkedin.com/in/mohammed-ali-boutaine/" target="_blank" aria-label="LinkedIn">
+                            <a href="https://www.linkedin.com/in/mohammed-ali-boutaine/" target="_blank"
+                                aria-label="LinkedIn">
                                 <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
                             </a>
                             <a href="https://www.instagram.com/ali_boutaine" target="_blank" aria-label="Instagram">
@@ -369,25 +639,29 @@
                 </div>
                 <div class="info">
                     <h2>Let's Talk</h2>
-                    <p>This form is currently not working. If you want to send an email, please click <a href="mailto:aliboutaine987@gmail.com"><u>here</u></a>.</p>
+                    <p>This form is currently not working. If you want to send an email, please click <a
+                            href="mailto:aliboutaine987@gmail.com"><u>here</u></a>.</p>
                     <h2><span class="outline">Or</span></h2>
                     <p>Email: <a href="mailto:aliboutaine987@gmail.com">aliboutaine987@gmail.com</a></p>
                     <p>Phone: 0650246210</p>
-                    <p>LinkedIn: <a href="https://www.linkedin.com/in/mohammed-ali-boutaine/" target="_blank">Mohammed Ali Boutaine</a></p>
+                    <p>LinkedIn: <a href="https://www.linkedin.com/in/mohammed-ali-boutaine/" target="_blank">Mohammed
+                            Ali Boutaine</a></p>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- Footer  -->
     <footer>
         <div class="footer-container">
             <div class="logo">Portfolio</div>
             <div class="copy">
-                <p>&copy; 2024</p>
+                <p>&copy; <span id="current-year">2025</span> </p>
                 <p>Made By <b>Mohammed Ali Boutaine</b></p>
             </div>
         </div>
-    </footer>    <script src="./js.js"></script>
+    </footer>
+    <script src="./js.js"></script>
 </body>
 
 </html>

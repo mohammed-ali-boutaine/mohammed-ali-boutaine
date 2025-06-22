@@ -89,4 +89,66 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setTimeout(type, 500);
   }
+
+   // Get all skill boxes
+  const skillBoxes = document.querySelectorAll(".skill-box");
+
+  // Function to handle both mobile and desktop interactions
+  skillBoxes.forEach((box) => {
+    // For touch devices (like mobile)
+    box.addEventListener("click", function () {
+      // If the box is already active, close it
+      if (this.classList.contains("active")) {
+        this.classList.remove("active");
+        this.setAttribute("aria-expanded", "false");
+        return;
+      }
+
+      // Close all other active boxes
+      skillBoxes.forEach((otherBox) => {
+        if (otherBox !== this && otherBox.classList.contains("active")) {
+          otherBox.classList.remove("active");
+          otherBox.setAttribute("aria-expanded", "false");
+        }
+      });
+
+      // Toggle active class on the clicked box
+      this.classList.toggle("active");
+      this.setAttribute("aria-expanded", "true");
+    });
+
+    // For accessibility: handle keyboard navigation
+    box.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        this.click(); // Trigger the click event
+      }
+    });
+
+    // Ensure boxes are focusable
+    if (!box.hasAttribute("tabindex")) {
+      box.setAttribute("tabindex", "0");
+    }
+
+    // Ensure aria-expanded is set
+    if (!box.hasAttribute("aria-expanded")) {
+      box.setAttribute("aria-expanded", "false");
+    }
+  });
+
+  // Close active skill box when clicking elsewhere
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest(".skill-box")) {
+      skillBoxes.forEach((box) => {
+        box.classList.remove("active");
+        box.setAttribute("aria-expanded", "false");
+      });
+    }
+  });
+
+
+
+  // Dynamic Year in footer
+      document.getElementById("current-year").textContent = new Date().getFullYear();
+
 });

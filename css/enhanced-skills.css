@@ -1,0 +1,255 @@
+/* Enhanced Skills Section Styles */
+
+.skills-container {
+  margin: 40px auto;
+  font-family: "Roboto", sans-serif;
+}
+
+.skills-heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.skills-heading h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.skills-heading p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Primary skills with icons */
+.primary-skills {
+  margin-bottom: 60px;
+}
+
+.primary-skills .row {
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 2rem;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.skill-box {
+  height: 170px;
+  border: 2px solid #333;
+  border-radius: 8px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  /* Accessibility improvements */
+  outline: none;
+}
+
+.skill-box:hover,
+.skill-box:focus,
+.skill-box.active {
+  background-color: var(--primary-color);
+  color: white;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.skill-box:hover i,
+.skill-box:focus i,
+.skill-box.active i {
+  color: white;
+}
+
+.skill-box i {
+  font-size: 40px;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+.skill-box h3 {
+  text-align: center;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.skill-description {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 15px;
+  border-radius: 0 0 8px 8px;
+  transition: all 0.3s ease;
+  font-size: 0.8rem;
+  height: calc(100% - 75px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.skill-box:hover .skill-description,
+.skill-box.active .skill-description {
+  bottom: 0;
+}
+
+/* Detailed skills categories */
+.detailed-skills {
+  background-color: #f8f8f8;
+  padding: 60px 0;
+  border-radius: 10px;
+}
+
+.detailed-skills h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+.skill-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.skill-category {
+  background-color: white;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.skill-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.skill-category h3 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.skill-category h3:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: var(--primary-color);
+}
+
+.skill-category ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skill-category ul li {
+  position: relative;
+  padding: 8px 0 8px 25px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #444;
+}
+
+.skill-category ul li:before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  line-height: 1.1;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .skills-heading h2 {
+    font-size: 2rem;
+  }
+
+  .skills-heading p {
+    padding: 0 20px;
+  }
+
+  .detailed-skills {
+    padding: 40px 20px;
+  }
+
+  .skill-categories {
+    grid-template-columns: 1fr;
+  }
+
+  .primary-skills .row {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-heading h2 {
+    font-size: 1.8rem;
+  }
+
+  .skills-heading p {
+    font-size: 0.9rem;
+  }
+
+  .primary-skills .row {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 1rem;
+  }
+
+  .skill-box {
+    height: 150px;
+    padding: 10px;
+  }
+
+  .skill-box i {
+    font-size: 30px;
+  }
+
+  .skill-box h3 {
+    font-size: 0.9rem;
+  }
+
+  .skill-description {
+    font-size: 0.7rem;
+    height: calc(100% - 60px);
+  }
+
+  .skill-category h3 {
+    font-size: 1.3rem;
+  }
+
+  .skill-category ul li {
+    font-size: 0.9rem;
+    padding: 6px 0 6px 20px;
+  }
+
+  .skill-category ul li:before {
+    font-size: 1rem;
+  }
+}

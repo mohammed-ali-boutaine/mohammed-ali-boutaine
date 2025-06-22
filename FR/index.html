@@ -41,10 +41,11 @@
       content="Je suis Mohammed Ali Boutaine, un développeur FullStack. Explorez mes compétences et projets. Contactez-moi pour une collaboration."
     />
     <meta name="twitter:image" content="URL_DE_VOTRE_IMAGE_SOCIALE" />
-
     <!-- Feuilles de style personnalisées -->
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/media.css" />
+    <link rel="stylesheet" href="../css/help-section.css" />
+    <link rel="stylesheet" href="../css/enhanced-skills.css" />
 
     <!-- CDN de Font Awesome -->
     <link
@@ -73,9 +74,9 @@
             Portfolio
           </a>
         </div>
-
         <div class="navbar">
           <a href="#home">Accueil</a>
+          <a href="#services">Services</a>
           <a href="#skills">Compétences</a>
           <a href="#project">Projets</a>
           <a href="#contact">Me contacter</a>
@@ -106,19 +107,25 @@
               <span class="outline">Développeur</span> FullStack</span
             >
           </h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quod
-            libero vel voluptas quasi alias minus nemo ut quaerat, temporibus
-            illo suscipit, dolore ipsa reiciendis perspiciatis ratione
-            cupiditate porro! Voluptate?
+          <p class="description">
+            Avec 4 ans d'expérience en développement web, je construis des sites
+            rapides, modernes et responsifs. Je crée des designs épurés et j'ai
+            réalisé de nombreux projets fullstack en utilisant des outils comme
+            React, Laravel et Tailwind CSS.
           </p>
+          <div class="cta-buttons">
+            <a href="#projects" class="btn btn-primary">Voir Projets</a>
+            <a href="#contact" class="btn btn-secondary"
+              >Travaillons Ensemble</a
+            >
+          </div>
           <div class="social-links"></div>
         </div>
 
         <div class="image">
           <img
-            src="../imgs/undraw_businessman_e7v0.svg"
-            alt="Illustration d'un homme d'affaires"
+            src="../imgs/hero-image.svg"
+            alt="Illustration de Mohammed Ali Boutaine"
           />
         </div>
       </section>
@@ -157,57 +164,375 @@
         </a>
       </section>
 
-      <section id="skills" class="skills">
-        <h1>Mes <span class="bold">Compétences</span></h1>
-        <div class="row">
-          <div class="box">
-            <i class="fa-brands fa-html5"></i>
-            <h3>HTML</h3>
+      <!-- Comment puis-je vous aider ? Section -->
+      <section class="help-section slide-in-buttom" id="services">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Comment puis-je vous aider ?</h2>
+            <p class="section-subtitle">
+              Je vous aiderai à trouver des solutions et à résoudre vos
+              problèmes. Nous utilisons un design éprouvé pour créer des
+              produits numériques qui atteignent vos objectifs commerciaux.
+            </p>
           </div>
 
-          <div class="box">
-            <i class="fa-brands fa-css3-alt"></i>
-            <h3>CSS</h3>
-          </div>
+          <div class="services-content-wrapper">
+            <!-- Côté gauche - Services verticaux -->
+            <div class="services-sidebar">
+              <div class="service-card">
+                <div class="service-icon">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+                    ></path>
+                    <polyline points="9,22 9,12 15,12 15,22"></polyline>
+                  </svg>
+                </div>
+                <h3 class="service-title">Développement Web</h3>
+                <p class="service-description">
+                  Applications web personnalisées construites avec des
+                  technologies modernes et les meilleures pratiques pour une
+                  performance optimale.
+                </p>
+                <div class="service-cta">
+                  <a
+                    href="#contact"
+                    class="contact-btn"
+                    aria-label="Contact pour le développement web"
+                    >Contact</a
+                  >
+                  <a
+                    href="#projects"
+                    class="project-btn"
+                    aria-label="Voir les projets de développement web"
+                    >Voir Projets</a
+                  >
+                </div>
+              </div>
 
-          <div class="box">
-            <i class="fa-brands fa-js"></i>
-            <h3>JavaScript</h3>
-          </div>
+              <div class="service-card">
+                <div class="service-icon">
+                  <svg viewBox="0 0 24 24">
+                    <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                    <path d="M10 4v4"></path>
+                    <path d="M14 4v4"></path>
+                    <path d="M4 8h16"></path>
+                  </svg>
+                </div>
+                <h3 class="service-title">Design Web</h3>
+                <p class="service-description">
+                  Interfaces belles et conviviales qui engagent les visiteurs et
+                  les convertissent en clients.
+                </p>
+                <div class="service-cta">
+                  <a
+                    href="#contact"
+                    class="contact-btn"
+                    aria-label="Contact pour le design web"
+                    >Contact</a
+                  >
+                  <a
+                    href="#projects"
+                    class="project-btn"
+                    aria-label="Voir les projets de design web"
+                    >Voir Projets</a
+                  >
+                </div>
+              </div>
 
-          <div class="box">
-            <i class="fa-brands fa-bootstrap"></i>
-            <h3>Bootstrap</h3>
-          </div>
+              <div class="service-card">
+                <div class="service-icon">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                    <path d="M2 17l10 5 10-5"></path>
+                    <path d="M2 12l10 5 10-5"></path>
+                  </svg>
+                </div>
+                <h3 class="service-title">Landing Pages</h3>
+                <p class="service-description">
+                  Pages d'atterrissage à fort taux de conversion conçues pour
+                  maximiser vos campagnes marketing et la croissance de votre
+                  entreprise.
+                </p>
+                <div class="service-cta">
+                  <a
+                    href="#contact"
+                    class="contact-btn"
+                    aria-label="Contact pour les landing pages"
+                    >Contact</a
+                  >
+                  <a
+                    href="#projects"
+                    class="project-btn"
+                    aria-label="Voir les projets de landing pages"
+                    >Voir Projets</a
+                  >
+                </div>
+              </div>
 
-          <div class="box">
-            <i class="fa-brands fa-react"></i>
-            <h3>React</h3>
-          </div>
+              <div class="service-card">
+                <div class="service-icon">
+                  <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M8 12h8"></path>
+                    <path d="M12 8v8"></path>
+                  </svg>
+                </div>
+                <h3 class="service-title">WordPress</h3>
+                <p class="service-description">
+                  Thèmes et plugins WordPress personnalisés, solutions de
+                  gestion de contenu adaptées à vos besoins.
+                </p>
+                <div class="service-cta">
+                  <a
+                    href="#contact"
+                    class="contact-btn"
+                    aria-label="Contact pour WordPress"
+                    >Contact</a
+                  >
+                  <a
+                    href="#projects"
+                    class="project-btn"
+                    aria-label="Voir les projets WordPress"
+                    >Voir Projets</a
+                  >
+                </div>
+              </div>
+            </div>
 
-          <div class="box">
-            <i class="fa-brands fa-php"></i>
-            <h3>PHP</h3>
-          </div>
+            <!-- Côté droit - Image et texte avec statistiques -->
+            <div class="about-content">
+              <div class="about-image">
+                <img src="../imgs/about-image.svg" alt="À propos de moi" />
+              </div>
+              <div class="about-text">
+                <h3>Dédié à la qualité et l'excellence</h3>
+                <p>
+                  Je suis un développeur web passionné qui se concentre sur la
+                  création de sites web et d'applications modernes et
+                  fonctionnels. Avec une expertise en développement front-end et
+                  back-end, je propose des solutions complètes pour les
+                  entreprises de toutes tailles.
+                </p>
+                <p>
+                  Mon objectif est d'aider les entreprises à établir une
+                  présence en ligne solide grâce à des sites web bien conçus et
+                  conviviaux qui convertissent les visiteurs en clients.
+                </p>
 
-          <div class="box">
-            <i class="fa-brands fa-laravel"></i>
-            <h3>Laravel</h3>
+                <div class="stats-section">
+                  <div class="stat-item">
+                    <span class="stat-number">20+</span>
+                    <span class="stat-label">Projets Réalisés</span>
+                  </div>
+                  <div class="stat-item">
+                    <span class="stat-number">4+</span>
+                    <span class="stat-label">Années d'Expérience</span>
+                  </div>
+                  <div class="stat-item">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">Clients Satisfaits</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
+      </section>
+      <!-- Section Compétences Améliorée -->
+      <section id="skills" class="skills-container">
+        <div class="skills-heading">
+          <h2>Mes <span class="bold">Compétences</span></h2>
+          <p>
+            Avec une gamme variée de compétences techniques, je propose des
+            solutions complètes de l'interface utilisateur au fonctionnement
+            back-end.
+          </p>
+        </div>
 
-          <div class="box database">
-            <i class="fa-solid fa-database"></i>
-            <h3>MySQL MongoDB</h3>
+        <!-- Compétences Principales avec Icônes et Descriptions -->
+        <div class="primary-skills">
+          <div class="row">
+            <div
+              class="skill-box"
+              tabindex="0"
+              role="button"
+              aria-expanded="false"
+              aria-label="HTML5 - Cliquez pour plus d'informations"
+            >
+              <i class="fa-brands fa-html5" aria-hidden="true"></i>
+              <h3>HTML5</h3>
+              <div class="skill-description">
+                Balisage sémantique et fonctionnalités HTML5 pour des sites web
+                accessibles et optimisés pour le référencement.
+              </div>
+            </div>
+
+            <div class="skill-box">
+              <i class="fa-brands fa-css3-alt"></i>
+              <h3>CSS3</h3>
+              <div class="skill-description">
+                CSS avancé incluant Flexbox, Grid, animations et techniques de
+                design responsive.
+              </div>
+            </div>
+
+            <div class="skill-box">
+              <i class="fa-brands fa-js"></i>
+              <h3>JavaScript</h3>
+              <div class="skill-description">
+                Fonctionnalités ES6+, manipulation du DOM, programmation
+                asynchrone et frameworks JS modernes.
+              </div>
+            </div>
+
+            <div class="skill-box">
+              <i class="fa-brands fa-react"></i>
+              <h3>React</h3>
+              <div class="skill-description">
+                Création d'interfaces utilisateur interactives avec React,
+                hooks, API de contexte et gestion d'état.
+              </div>
+            </div>
+
+            <div class="skill-box">
+              <i class="fa-brands fa-php"></i>
+              <h3>PHP</h3>
+              <div class="skill-description">
+                Développement web côté serveur avec PHP 8, principes POO et
+                architecture MVC.
+              </div>
+            </div>
+
+            <div class="skill-box">
+              <i class="fa-brands fa-laravel"></i>
+              <h3>Laravel</h3>
+              <div class="skill-description">
+                Développement full-stack avec le framework Laravel, Eloquent ORM
+                et templates Blade.
+              </div>
+            </div>
+
+            <div class="skill-box">
+              <i class="fa-solid fa-database"></i>
+              <h3>Bases de données</h3>
+              <div class="skill-description">
+                Conception de bases de données, SQL, travail avec MySQL et
+                MongoDB pour différents besoins de données.
+              </div>
+            </div>
+
+            <div class="skill-box">
+              <i class="fa-brands fa-bootstrap"></i>
+              <h3>Tailwind CSS</h3>
+              <div class="skill-description">
+                Création de designs utility-first avec Tailwind CSS pour un
+                développement UI rapide et cohérent.
+              </div>
+            </div>
+
+            <div class="skill-box">
+              <i class="fa-brands fa-github"></i>
+              <h3>Git & GitHub</h3>
+              <div class="skill-description">
+                Contrôle de version, développement collaboratif, stratégies de
+                branches et flux de travail CI/CD.
+              </div>
+            </div>
           </div>
+        </div>
 
-          <div class="box">
-            <i class="fa-brands fa-github"></i>
-            <h3>Git & GitHub</h3>
+        <!-- Compétences Détaillées par Catégorie -->
+        <div class="detailed-skills">
+          <h2>Expertise Technique</h2>
+
+          <div class="skill-categories">
+            <div class="skill-category">
+              <h3>Front-end</h3>
+              <ul>
+                <li>HTML5 & CSS3</li>
+                <li>JavaScript (ES6+) & TypeScript</li>
+                <li>React.js</li>
+                <li>Design Responsive</li>
+                <li>Tailwind CSS & Bootstrap</li>
+                <li>SASS/SCSS</li>
+              </ul>
+            </div>
+
+            <div class="skill-category">
+              <h3>Back-end</h3>
+              <ul>
+                <li>PHP 7/8</li>
+                <li>Framework Laravel</li>
+                <li>Développement d'API RESTful</li>
+                <li>Authentification & Autorisation</li>
+                <li>Configuration Serveur</li>
+              </ul>
+            </div>
+
+            <div class="skill-category">
+              <h3>Base de données</h3>
+              <ul>
+                <li>MySQL</li>
+                <li>MongoDB</li>
+                <li>Conception de Bases de Données</li>
+                <li>Optimisation des Requêtes</li>
+                <li>ORM (Eloquent)</li>
+              </ul>
+            </div>
+
+            <div class="skill-category">
+              <h3>Gestion de Projet</h3>
+              <ul>
+                <li>Méthodologies Agiles</li>
+                <li>Contrôle de Version (Git)</li>
+                <li>Planification de Projet</li>
+                <li>Collaboration en Équipe</li>
+              </ul>
+            </div>
+
+            <div class="skill-category">
+              <h3>Architecture & Patterns</h3>
+              <ul>
+                <li>Architecture MVC</li>
+                <li>Services RESTful</li>
+                <li>Conception Orientée Objet</li>
+                <li>Principes de Code Propre</li>
+              </ul>
+            </div>
           </div>
+        </div>
 
-          <div class="box">
-            <i class="fa-brands fa-figma"></i>
-            <h3>Figma</h3>
+        <!-- Section Outils -->
+        <div
+          class="detailed-skills"
+          style="margin-top: 30px; background-color: #f1f1f1"
+        >
+          <h2>Outils de Développement</h2>
+          <div class="skill-categories" style="grid-template-columns: 1fr">
+            <div class="skill-category">
+              <p>
+                J'utilise une variété d'outils pour améliorer la productivité et
+                fournir du code de haute qualité:
+              </p>
+              <ul
+                style="
+                  display: grid;
+                  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                  gap: 10px;
+                  margin-top: 15px;
+                "
+              >
+                <li>VS Code & PHPStorm</li>
+                <li>GitHub & GitLab</li>
+                <li>Docker</li>
+                <li>Figma & Adobe XD</li>
+                <li>Chrome DevTools</li>
+                <li>Postman</li>
+                <li>npm & Composer</li>
+                <li>Terminal/Ligne de Commande</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -261,5 +586,6 @@
       </div>
     </footer>
     <script src="../js.js"></script>
+    <script src="../js/skills.js"></script>
   </body>
 </html>
