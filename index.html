@@ -93,7 +93,9 @@
 
         nav .logo img {
             height: 30px;
-        }        /* Loading overlay styles */
+        }
+
+        /* Loading overlay styles */
         .loading-overlay {
             position: fixed;
             top: 0;
@@ -109,13 +111,13 @@
             visibility: visible;
             transition: opacity 0.5s ease, visibility 0.5s ease;
         }
-        
+
         .loading-overlay.hidden {
             opacity: 0;
             visibility: hidden;
         }
-        
-    
+
+
 
         .loading-spinner {
             width: 50px;
@@ -253,7 +255,7 @@
                 </div>
             </div>
             <div class="image">
-                <img src="./imgs/hero-image.svg" alt="Hero illustration of Mohammed Ali Boutaine">
+                <img loading="lazy" src="./imgs/hero-image.svg" alt="Hero illustration of Mohammed Ali Boutaine">
             </div>
         </section>
 
@@ -598,17 +600,26 @@
                         <img src="./imgs/airbooking.png" alt="">
                     </div>
                     <div class="content">
-                        <h2> <span class="bold">01- </span> AirBooking - Reset and manage Hotels </h2>
+                        <h2><span class="bold">01 -</span> AirBooking – Hotel Reservation and Management Web App</h2>
 
-                        <p>PHP website where you can sign in, log in, read content, and leave feedback.</p>
-                        <p>Technologies</p>
+                        <p>
+                            Full-stack web application that allows users to search for hotels, book rooms, and manage
+                            their reservations.
+                            It includes a secure admin and manager dashboard for hotel and reservation management.
+                            Integrated with Stripe for online payments.
+                            Focused on user experience, performance, and security.
+                        </p>
 
+                        <p><strong>Technologies:</strong></p>
                         <ul>
-                            <li>HTML CSS Js</li>
-                            <li>Php - MySQL</li>
+                            <li>Frontend: React, TypeScript, Tailwind CSS</li>
+                            <li>Backend: Laravel (PHP), PostgreSQL</li>
+                            <li>Payments: Stripe Integration</li>
+                            <li>Deployment: Docker</li>
                         </ul>
                         <p>
-                            <a href="https://github.com/mohammed-ali-boutaine/jetway" target="_blank">View code source
+                            <a href="https://github.com/mohammed-ali-boutaine/hotel-system" target="_blank">View code
+                                source
                                 <i class="fa-solid fa-arrow-right"></i></a>
                         </p>
 
@@ -619,42 +630,61 @@
                 <div class="row">
 
                     <div class="content">
-                        <h2> <span class="bold">02- </span> GUI Python System</h2>
-                        <p>Student Mangement system where you can display ,add,delete,serach for student </p>
-                        <p>Technologies</p>
+                        <h2><span class="bold">02 -</span> Family Travel Tracker – Share and Document Family Adventures
+                        </h2>
 
+                        <p>
+                            Web application designed for families to track and share the countries they've visited.
+                            Provides a simple and user-friendly interface to document trips and create a shared travel
+                            history.
+                        </p>
+
+                        <p><strong>Technologies:</strong></p>
                         <ul>
-                            <li>Python</li>
-                            <li>Python Tkinter</li>
+                            <li>Backend: Node.js, Express.js</li>
+                            <li>Database: PostgreSQL</li>
+                            <li>Templating Engine: EJS</li>
                         </ul>
                         <p>
-                            <a href="https://github.com/mohammed-ali-boutaine/python-poo-tkinter">View code source <i
+                            <a href="https://github.com/mohammed-ali-boutaine/family-travel-tracker">View code source <i
                                     class="fa-solid fa-arrow-right"></i></a>
                         </p>
                     </div>
                     <div class="image">
-                        <img src="./imgs/gestion-etudiant-tkinter.png" alt="">
+                        <img src="./imgs/family-tracker.png" alt="">
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="image">
-                        <img src="./imgs/todolist.png" alt="">
+                        <img src="./imgs/elearning.png" alt="">
                     </div>
                     <div class="content">
-                        <h2> <span class="bold">03- </span>React TodoList (using react cdn)</h2>
-                        <p>task Management where tou can add delete modify tasks</p>
-                        <p>Technologies</p>
+                        <h2><span class="bold">03 -</span> LearnSphere – Multi-Role E-Learning Platform</h2>
 
+                        <p>
+                            A dynamic e-learning web application supporting multiple roles: Super Admin, Admin, and
+                            User.
+                            Built with Laravel Blade and Tailwind CSS, the platform allows admins to manage users and
+                            courses,
+                            while users can watch lessons and track progress. Designed for scalability and simplicity
+                            using SQLite
+                            during development.
+                        </p>
+
+                        <p><strong>Technologies:</strong></p>
                         <ul>
-                            <li>HTML CSS</li>
-                            <li>React</li>
+                            <li>Backend & Templating: Laravel Blade</li>
+                            <li>Styling: Tailwind CSS</li>
+                            <li>Database: SQLite</li>
+                            <li>Role-Based Access Control (RBAC)</li>
                         </ul>
                         <p>
-                            <a href="https://github.com/mohammed-ali-boutaine/todoList-react-browser"
-                                target="_blank">View code source <i class="fa-solid fa-arrow-right"></i></a>
-                            <a href="https://mohammed-ali-boutaine.github.io/todoList-react-browser/"
-                                target="_blank">Live</a>
+                            (this is a private projet in my intership)
+                            <!-- <a href="https://github.com/mohammed-ali-boutaine"
+                                target="_blank">View code source <i class="fa-solid fa-arrow-right"></i></a> -->
+                            <!-- <a href="https://mohammed-ali-boutaine.github.io"
+                                target="_blank">Live</a> -->
                         </p>
 
 
@@ -666,22 +696,30 @@
                 <div class="row">
 
                     <div class="content">
-                        <h2> <span class="bold">03- </span> Drum Soundes</h2>
-                        <p></p>
-                        <p>Technologies</p>
+                        <h2><span class="bold">04 -</span> Connectly – MERN Stack Social Media Platform</h2>
+
+                        <p>
+                            Full-featured social media web app built with the MERN stack. Includes user authentication,
+                            post creation, likes, and comments.
+                            Delivers a smooth user experience using Redux for state management and Axios for API
+                            communication.
+                        </p>
+
+                        <p><strong>Technologies:</strong></p>
                         <ul>
-                            <li>HTML CSS</li>
-                            <li>JavaScript</li>
+                            <li>Frontend: React, Redux, Axios</li>
+                            <li>Backend: Node.js, Express.js</li>
+                            <li>Database: MongoDB</li>
                         </ul>
                         <p>
-                            <a href="https://github.com/mohammed-ali-boutaine/drum-sounds" target="_blank">View code
+                            <a href="https://github.com/mohammed-ali-boutaine/social-media-mern-app"
+                                target="_blank">View code
                                 source <i class="fa-solid fa-arrow-right"></i></a>
-                            <a href="https://mohammed-ali-boutaine.github.io/drum-sounds/" target="_blank">Live</a>
                         </p>
                     </div>
 
                     <div class="image">
-                        <img src="./imgs/drum-sound.png" alt="">
+                        <img src="./imgs/mern.webp" alt="">
                     </div>
                 </div>
 
@@ -775,8 +813,9 @@
         }
 
         // Handle loading overlay immediately
-        document.addEventListener('DOMContentLoaded', function () {            const loadingOverlay = document.querySelector('.loading-overlay');
-            
+        document.addEventListener('DOMContentLoaded', function () {
+            const loadingOverlay = document.querySelector('.loading-overlay');
+
             // Add loading class to body when page is loading
             document.body.classList.add('loading');
 
