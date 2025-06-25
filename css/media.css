@@ -2,7 +2,7 @@
   html {
     font-size: 18px;
     scroll-behavior: smooth;
-    scroll-padding-top: 100px;
+    scroll-padding-top: 50px;
   }
 
   nav {
@@ -106,14 +106,14 @@
     display: flex;
     justify-content: center;
     position: absolute;
-    top: 340px;
+    top: 372px;
     margin: 0;
     left: 0;
 
     /* height: 100vh; */
   }
   nav .cv a {
-    width: 200px;
+    /* width: 200px; */
     text-align: center;
     display: inline-block;
 
@@ -254,7 +254,8 @@
     flex-direction: column;
     justify-content: center;
     gap: 30px;
-  }  .project .row .content {
+  }
+  .project .row .content {
     max-width: 350px;
     margin: auto;
   }
@@ -264,6 +265,55 @@
     margin: auto; */
     order: 1;
   }
+
+  /* About Section Mobile Responsive */
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-image {
+    order: -1;
+  }
+
+  .about-stats {
+    gap: 20px;
+  }
+
+  .stat {
+    padding: 15px;
+    min-width: 70px;
+  }
+
+  .stat-number {
+    font-size: 1.5rem;
+  }
+
+  /* Contact Section Mobile Responsive */
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contact-form {
+    padding: 30px;
+  }
+
+  .contact-social {
+    justify-content: center;
+  }
+
+  /* Footer Mobile Responsive */
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+    max-width: 100%;
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 580px) {
@@ -271,8 +321,11 @@
     font-size: 18px;
     cursor: auto;
     scroll-behavior: smooth;
-    scroll-padding-top: 100px;
+    scroll-padding-top: 50px;
     overflow-x: hidden;
+  }
+  .home {
+    margin-top: 80px;
   }
   nav .cv a {
     width: 80%;
@@ -280,12 +333,18 @@
   .social-links {
     position: static;
     width: 100%;
-    margin: 20px auto;
+    /* margin: 20px auto; */
     flex-direction: row;
     justify-content: center;
     transform: none;
   }
 
+  .cta-buttons a {
+    /* margin: 0px  1rem; */
+    /* gap: 20px; */
+    margin: 5px 0px;
+  /* gap: 20px; */
+}
   .social-links a {
     margin: 0 10px;
   }
@@ -293,19 +352,20 @@
   .home .image {
     display: none; /* Hide the hero image on mobile */
   }
-  .home .content {
-    /* border: 1px solid black; */
-    width: 100%;
-    height: auto;
-    margin: 40px 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: 10px;
-    padding-top: 10px;
-  }
+    .home .content {
+        /* border: 1px solid black; */
+        width: 100%;
+        height: fit-content;
+        /* margin: 40px 0; */
+        display: flex
+;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 0;
+        /* padding-top: 10px; */
+    }
 
   .home .content h1 {
     text-transform: capitalize;
@@ -355,20 +415,65 @@
     height: 240px;
     object-fit: cover;
   }
+
+  .about {
+    padding: 40px 0;
+    margin: 40px auto;
+  }
+
+  .about-header h2 {
+    font-size: 2rem;
+  }
+
+  .about-intro {
+    font-size: 1.1rem;
+  }
+
+  .about-description {
+    font-size: 1rem;
+  }
+
+  .about-stats {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .contact {
+    padding: 40px 0;
+  }
+
+  .contact-form {
+    padding: 20px;
+  }
+
+  .contact-social {
+    gap: 10px;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-social-links {
+    justify-content: center;
+  }
 }
 
 @media screen and (max-width: 767px) {
   /* Mobile-specific social links styling */
   .social-links {
-    position: static;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 30px auto;
-    transform: none;
-    gap: 10px;
-    padding: 0;
+          position: static;
+        width: 100%;
+        display: flex
+;
+        flex-direction: row;
+        justify-content: center;
+        /* margin: 30px auto; */
+        transform: none;
+        /* gap: 10px; */
+        padding: 0;
   }
 
   .social-links a {
@@ -377,32 +482,5 @@
 
   .social-links i {
     font-size: 22px;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .home {
-    margin-top: 80px;
-    flex-direction: column;
-    min-height: auto;
-    padding: 20px 0;
-  }
-
-  .home .content {
-    width: 100%;
-    padding: 0 15px;
-    margin: 20px 0;
-  }
-
-  .home .content h1 {
-    font-size: 1.2rem;
-  }
-
-  .home .content h1 .bold {
-    font-size: 1.3rem;
-  }
-
-  .home .content h1 .outline {
-    font-size: 1.5rem;
   }
 }

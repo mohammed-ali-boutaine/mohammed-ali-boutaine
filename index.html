@@ -731,38 +731,85 @@
         </div>
 
 
+
         <!-- About Section  -->
 
-        <section class="about" id="about">
-            <div class="image-div">
-                <img src="./imgs/about-image.svg" alt="" srcset="">
+
+        <section class="about-me-section" id="about">
+            <div class="about-header">
+                <h2 class="section-title">
+                    <span class="outline">About</span> <span>Me</span>
+                </h2>
             </div>
-            <div class="content">
-                <h1><span class="outline bold">About</span> <span class="bold">Me</span></h1>
-                <p>
-                    Étudiant en Développement Web Full Stack, je suis passionné par la
-                    programmation et résoudre des problèmes. Mon intérêt pour le
-                    développement Full Stack m'a conduit à explorer l'ensemble du
-                    processus de création web, depuis la conception de l'interface
-                    utilisateur jusqu'à la gestion des bases de données et le déploiement
-                    des applications. J'adore créer de nouveaux designs et mettre en
-                    pratique mes compétences pour développer des solutions web
-                    innovantes.
+
+            <div class="about-content">
+                <p class="about-intro">
+                    Passionate, creative, and automation-focused software developer.
+                    Committed to writing clean, simple, and functional code, following the DRY principle.
                 </p>
+
+                <p class="about-description">
+                    As a Full Stack Web Development student, I'm passionate about programming and solving
+                    problems. My interest in Full Stack development has led me to explore the entire web creation
+                    process — from user interface design to database management and application deployment.
+                    I love creating new designs and putting my skills into practice to develop innovative web solutions.
+                </p>
+
+                <div class="education">
+                    <p class="education-title">Education</p>
+                    <ul>
+                        <li><strong>Full-Stack Web Development</strong> – YOUCODE, UM6P (2024–2026)</li>
+                        <li><strong>DTS in Web Development</strong> – ISTA NTIC, Hay Riad, Rabat (2022–2024)</li>
+                        <li><strong>Baccalaureate in Physical Sciences</strong> – Al Maghrib Al Arabi, Salé (2021–2022)
+                        </li>
+                    </ul>
+                </div>
+
+                <p class="location">📍 Morocco – Salé</p>
+            </div>
         </section>
+
+
+
+
+
 
         <!-- Contact section -->
         <section id="contact" class="contact">
-            <h1><span class="outline bold">Contact</span> me</h1>
-            <div class="row">
-                <div class="form">
-                    <form action="">
-                        <input type="text" placeholder="Your Name">
-                        <input type="email" placeholder="Email">
-                        <input type="text" placeholder="Your website (if exists)">
-                        <input type="text" placeholder="How can I help?">
-                        <div class="btns">
-                            <button type="submit" class="after-animation">Get In Touch</button>
+            <div class="contact-container">
+                <h2 class="section-title text-center"><span class="outline bold">Contact</span> Me</h2>
+
+                <div class="contact-content">
+                    <div class="contact-form">
+                        <form action="">
+                            <input type="text" placeholder="Your Name" required>
+                            <input type="email" placeholder="Your Email" required>
+                            <textarea placeholder="How can I help you?" rows="5" required></textarea>
+                            <button type="submit" class="contact-submit-btn">Get In Touch</button>
+                        </form>
+                    </div>
+
+                    <div class="contact-info">
+                        <h3>Let's Talk</h3>
+                        <p>This form is currently not working. If you want to send an email, please click <a
+                                href="mailto:aliboutaine987@gmail.com"><u>here</u></a>.</p>
+
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                                <span>aliboutaine987@gmail.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                                <span>+212-650246210</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                                <span>Mohammed Ali Boutaine</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-social">
                             <a href="https://github.com/mohammed-ali-boutaine" target="_blank" aria-label="GitHub">
                                 <i class="fa-brands fa-github" aria-hidden="true"></i>
                             </a>
@@ -770,39 +817,90 @@
                                 aria-label="LinkedIn">
                                 <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
                             </a>
-                            <a href="https://www.instagram.com/ali_boutaine" target="_blank" aria-label="Instagram">
+                            <a href="https://www.instagram.com/ali.boutaine" target="_blank" aria-label="Instagram">
                                 <i class="fa-brands fa-instagram" aria-hidden="true"></i>
                             </a>
                             <a href="mailto:aliboutaine987@gmail.com" target="_blank" aria-label="Email">
                                 <i class="fa-solid fa-envelope" aria-hidden="true"></i>
                             </a>
                         </div>
-                    </form>
-                </div>
-                <div class="info">
-                    <h2>Let's Talk</h2>
-                    <p>This form is currently not working. If you want to send an email, please click <a
-                            href="mailto:aliboutaine987@gmail.com"><u>here</u></a>.</p>
-                    <h2><span class="outline">Or</span></h2>
-                    <p>Email: <a href="mailto:aliboutaine987@gmail.com">aliboutaine987@gmail.com</a></p>
-                    <p>Phone: 0650246210</p>
-                    <p>LinkedIn: <a href="https://www.linkedin.com/in/mohammed-ali-boutaine/" target="_blank">Mohammed
-                            Ali Boutaine</a></p>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
+
+
+
+
+
     <!-- Footer  -->
     <footer>
         <div class="footer-container">
-            <div class="logo">Portfolio</div>
-            <div class="copy">
-                <p>&copy; <span id="current-year">2025</span> </p>
-                <p>Made By <b>Mohammed Ali Boutaine</b></p>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="./imgs/logo-white.svg" alt="Mohammed Ali Boutaine Logo" class="footer-logo-img">
+                        <span>Portfolio</span>
+                    </div>
+                    <p class="footer-description">
+                        Passionate Full Stack Developer creating innovative web solutions with clean, efficient code.
+                    </p>
+                </div>
+
+                <div class="footer-nav">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-social">
+                    <h4>Follow Me</h4>
+                    <div class="footer-social-links">
+                        <a href="https://github.com/mohammed-ali-boutaine" target="_blank" aria-label="GitHub">
+                            <i class="fa-brands fa-github" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/mohammed-ali-boutaine/" target="_blank"
+                            aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.instagram.com/ali.boutaine" target="_blank" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                        </a>
+                        <a href="mailto:aliboutaine987@gmail.com" target="_blank" aria-label="Email">
+                            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Get In Touch</h4>
+                    <div class="footer-contact-info">
+                        <p><i class="fa-solid fa-envelope"></i> aliboutaine987@gmail.com</p>
+                        <p><i class="fa-solid fa-phone"></i> +212-650246210</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2025</span> Mohammed Ali Boutaine. All rights reserved.</p>
             </div>
         </div>
-    </footer> <!-- Script to load non-critical CSS and handle loading animation -->
+    </footer>
+
+
+
+    <!-- Script to load non-critical CSS and handle loading animation -->
+
+
+
     <script>
         /* Load CSS files asynchronously */
         function loadCSS(href) {
@@ -837,7 +935,6 @@
             const loadingOverlay = document.querySelector('.loading-overlay');
             if (loadingOverlay && !loadingOverlay.classList.contains('hidden')) {
                 loadingOverlay.classList.add('hidden');
-                // Remove loading class to restore scrollbar
                 document.body.classList.remove('loading');
             }
         });
@@ -845,7 +942,6 @@
 
     <!-- Load site's main JavaScript -->
     <script src="./js.js" defer></script>
-    <!-- <script src="./js/skills.js" defer></script> -->
 </body>
 
 </html>
