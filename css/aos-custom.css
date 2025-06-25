@@ -1,0 +1,192 @@
+/* Custom AOS Animation Enhancements */
+
+/* Ensure smooth transitions for all AOS elements */
+[data-aos] {
+  transition-property: transform, opacity, visibility;
+  transition-timing-function: ease-out;
+  transition-duration: 0.4s;
+}
+
+/* Custom fade animations with enhanced easing */
+[data-aos="fade-up"] {
+  transform: translate3d(0, 20px, 0);
+  opacity: 0;
+}
+
+[data-aos="fade-down"] {
+  transform: translate3d(0, -20px, 0);
+  opacity: 0;
+}
+
+[data-aos="fade-left"] {
+  transform: translate3d(-20px, 0, 0);
+  opacity: 0;
+}
+
+[data-aos="fade-right"] {
+  transform: translate3d(20px, 0, 0);
+  opacity: 0;
+}
+
+/* Custom zoom animations */
+[data-aos="zoom-in"] {
+  transform: scale(0.9);
+  opacity: 0;
+}
+
+[data-aos="zoom-out"] {
+  transform: scale(1.1);
+  opacity: 0;
+}
+
+/* Custom flip animations */
+[data-aos="flip-left"] {
+  transform: perspective(2500px) rotateY(-60deg);
+  opacity: 0;
+}
+
+[data-aos="flip-right"] {
+  transform: perspective(2500px) rotateY(60deg);
+  opacity: 0;
+}
+
+/* Enhanced skill box animations */
+.skill-box[data-aos] {
+  transform: translateY(15px) scale(0.98);
+  opacity: 0;
+}
+
+.skill-box[data-aos].aos-animate {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+/* Project section animations */
+.project .row[data-aos] {
+  transform: translateX(-20px);
+  opacity: 0;
+}
+
+.project .row[data-aos].aos-animate {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Services card stagger effect */
+.service-card[data-aos] {
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+.service-card[data-aos].aos-animate {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Stats animation enhancement */
+.stat-item[data-aos] {
+  transform: scale(0.8) translateY(10px);
+  opacity: 0;
+}
+
+.stat-item[data-aos].aos-animate {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+}
+
+/* Contact form animation */
+.contact-form[data-aos] {
+  transform: translateX(-15px);
+  opacity: 0;
+}
+
+.contact-info[data-aos] {
+  transform: translateX(15px);
+  opacity: 0;
+}
+
+.contact-form[data-aos].aos-animate,
+.contact-info[data-aos].aos-animate {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Disable animations on reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  [data-aos] {
+    transform: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+  }
+}
+
+/* Mobile optimization for animations - Enable with reduced motion */
+@media (max-width: 768px) {
+  [data-aos] {
+    transition-duration: 0.3s !important;
+  }
+
+  /* Reduced but still visible animations for mobile */
+  .skill-box[data-aos] {
+    transform: translateY(10px) scale(0.99);
+  }
+
+  .service-card[data-aos] {
+    transform: translateY(10px);
+  }
+
+  [data-aos="fade-up"] {
+    transform: translate3d(0, 15px, 0);
+  }
+
+  [data-aos="fade-left"] {
+    transform: translate3d(-15px, 0, 0);
+  }
+
+  [data-aos="fade-right"] {
+    transform: translate3d(15px, 0, 0);
+  }
+}
+
+/* Enhanced loading states */
+.aos-animate {
+  transition-duration: 0.4s !important;
+}
+
+/* Smooth scroll enhancement */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+/* Faster animation delays */
+[data-aos-delay="50"] {
+  transition-delay: 0.05s;
+}
+[data-aos-delay="100"] {
+  transition-delay: 0.1s;
+}
+[data-aos-delay="150"] {
+  transition-delay: 0.15s;
+}
+[data-aos-delay="200"] {
+  transition-delay: 0.2s;
+}
+[data-aos-delay="250"] {
+  transition-delay: 0.25s;
+}
+[data-aos-delay="300"] {
+  transition-delay: 0.3s;
+}
+[data-aos-delay="350"] {
+  transition-delay: 0.35s;
+}
+[data-aos-delay="400"] {
+  transition-delay: 0.4s;
+}
+[data-aos-delay="450"] {
+  transition-delay: 0.45s;
+}
+[data-aos-delay="500"] {
+  transition-delay: 0.5s;
+}

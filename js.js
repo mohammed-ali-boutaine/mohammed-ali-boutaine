@@ -1,4 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // Initialize AOS when DOM is ready
+  if (typeof AOS !== "undefined") {
+    AOS.init({
+      duration: 800,
+      easing: "ease-out",
+      once: true,
+      offset: 50,
+      delay: 0,
+      disable: false, // Enable on all devices including mobile
+    });
+  }
+
   // Menu toggle functionality
   const menuButton = document.querySelector(".menu");
   const nav = document.querySelector("nav");
@@ -90,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(type, 500);
   }
 
-   // Get all skill boxes
+  // Get all skill boxes
   const skillBoxes = document.querySelectorAll(".skill-box");
 
   // Function to handle both mobile and desktop interactions
@@ -146,9 +158,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-
-
   // Dynamic Year in footer
-      document.getElementById("current-year").textContent = new Date().getFullYear();
-
+  document.getElementById("current-year").textContent =
+    new Date().getFullYear();
 });

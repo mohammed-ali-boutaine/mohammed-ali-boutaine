@@ -23,79 +23,11 @@
     <meta property="og:url" content="medali.online">
     <meta property="og:url" content="https://medali.online"> <!-- Critical CSS inlined to avoid render blocking -->
     <style>
-        /* Critical CSS for above-the-fold content */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Roboto", sans-serif;
-            transition: all 0.3s ease;
+        /* Minimal critical CSS for immediate loading */
+        body.loading {
+            overflow: hidden;
         }
 
-        :root {
-            --bgc: #fff;
-            --text-color: #000;
-            --primary-color: #000000;
-            --main-color: #1e90ff;
-            --secondary-color: #00cccc;
-            --grey: #f2f2f2;
-            --nav-bgc: #e2e2e2;
-            --nav-color: black;
-        }
-
-        html {
-            font-size: 18px;
-            scroll-behavior: smooth;
-            scroll-padding-top: 100px;
-            overflow-x: hidden;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        /* Header styles for immediate display */
-        header {
-            background-color: #ffffff;
-            position: fixed;
-            top: 0px;
-            left: 0px;
-            right: 0px;
-            z-index: 1000;
-            margin-bottom: 60px;
-            box-shadow: 0 2px 20px rgba(68, 68, 68, 0.1);
-        }
-
-        nav {
-            max-width: 1240px;
-            margin: auto;
-            width: 100%;
-            height: 60px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: var(--text-color);
-            text-transform: capitalize;
-        }
-
-        nav .logo a {
-            font-size: 1.5rem;
-            font-weight: 500;
-            font-family: "Lexend Deca", sans-serif;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        nav .logo img {
-            height: 30px;
-        }
-
-        /* Loading overlay styles */
         .loading-overlay {
             position: fixed;
             top: 0;
@@ -117,13 +49,11 @@
             visibility: hidden;
         }
 
-
-
         .loading-spinner {
             width: 50px;
             height: 50px;
             border: 5px solid #f3f3f3;
-            border-top: 5px solid var(--primary-color);
+            border-top: 5px solid #000;
             border-radius: 50%;
             animation: spin 1s linear infinite;
         }
@@ -163,6 +93,9 @@
             href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Roboto:wght@300;400;500;700;900&display=swap"
             rel="stylesheet">
     </noscript>
+
+    <!-- AOS (Animate On Scroll) CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 
@@ -209,7 +142,7 @@
 
         <!-- Hero section -->
         <section class="home" id="home">
-            <div class="content">
+            <div class="content" data-aos="fade-right" data-aos-duration="800" data-aos-delay="100">
                 <h1>Hello, I'm <span class="bold">Mohammed Ali Boutaine</span></h1>
                 <h1>A <span class="bold">FullStack</span> <span class="outline">Developer</span></h1>
 
@@ -254,16 +187,16 @@
                     <p>Phone : +212-650246210 </p>
                 </div>
             </div>
-            <div class="image">
+            <div class="image" data-aos="fade-left" data-aos-duration="500" data-aos-delay="200">
                 <img loading="lazy" src="./imgs/hero-image.svg" alt="Hero illustration of Mohammed Ali Boutaine">
             </div>
         </section>
 
         <!-- How Can I Help Section -->
         <div class="services-container">
-            <section class="help-section slide-in-buttom" id="services">
+            <section class="help-section slide-in-buttom" id="services" data-aos="fade-up" data-aos-duration="400">
                 <div class="container">
-                    <div class="section-header">
+                    <div class="section-header" data-aos="fade-up" data-aos-duration="300">
                         <h2 class="section-title-white">How Can I Help?</h2>
                         <p class="section-subtitle">
                             I will help you with finding a solution and solve your problems.
@@ -273,8 +206,9 @@
 
                     <div class="services-content-wrapper">
                         <!-- Left side - Vertical Services -->
-                        <div class="services-sidebar">
-                            <div class="service-card">
+                        <div class="services-sidebar" data-aos="fade-right" data-aos-duration="400"
+                            data-aos-delay="100">
+                            <div class="service-card" data-aos="fade-up" data-aos-duration="300" data-aos-delay="50">
                                 <div class="service-icon">
                                     <svg viewBox="0 0 24 24">
                                         <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
@@ -288,7 +222,7 @@
                                 </p>
                             </div>
 
-                            <div class="service-card">
+                            <div class="service-card" data-aos="fade-up" data-aos-duration="300" data-aos-delay="100">
                                 <div class="service-icon">
                                     <svg viewBox="0 0 24 24">
                                         <rect x="2" y="4" width="20" height="16" rx="2"></rect>
@@ -305,7 +239,7 @@
 
                             </div>
 
-                            <div class="service-card">
+                            <div class="service-card" data-aos="fade-up" data-aos-duration="300" data-aos-delay="150">
                                 <div class="service-icon">
                                     <svg viewBox="0 0 24 24">
                                         <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
@@ -324,7 +258,7 @@
                     </div> -->
                             </div>
 
-                            <div class="service-card">
+                            <div class="service-card" data-aos="fade-up" data-aos-duration="300" data-aos-delay="200">
                                 <div class="service-icon">
                                     <svg viewBox="0 0 24 24">
                                         <circle cx="12" cy="12" r="10"></circle>
@@ -345,7 +279,7 @@
                         </div>
 
                         <!-- Right side - Image and Text with Stats -->
-                        <div class="about-content">
+                        <div class="about-content" data-aos="fade-left" data-aos-duration="400" data-aos-delay="150">
                             <div class="about-image">
                                 <img src="./imgs/about-image.svg" alt="About Me">
                             </div>
@@ -358,15 +292,18 @@
                                     well-designed, user-friendly websites that convert visitors into customers.</p>
 
                                 <div class="stats-section">
-                                    <div class="stat-item">
+                                    <div class="stat-item" data-aos="zoom-in" data-aos-duration="300"
+                                        data-aos-delay="250">
                                         <span class="stat-number">20+</span>
                                         <span class="stat-label">Projects Completed</span>
                                     </div>
-                                    <div class="stat-item">
+                                    <div class="stat-item" data-aos="zoom-in" data-aos-duration="300"
+                                        data-aos-delay="300">
                                         <span class="stat-number">4+</span>
                                         <span class="stat-label">Years Coding and Building</span>
                                     </div>
-                                    <div class="stat-item">
+                                    <div class="stat-item" data-aos="zoom-in" data-aos-duration="300"
+                                        data-aos-delay="350">
                                         <span class="stat-number">5+</span>
                                         <span class="stat-label"> Team Projects</span>
 
@@ -377,12 +314,9 @@
                     </div>
                 </div>
             </section>
-        </div>
-
-
-        <!-- Skills section -->
-        <section id="skills" class="skills-container">
-            <div class="skills-heading">
+        </div> <!-- Skills section -->
+        <section id="skills" class="skills-container" data-aos="fade-up" data-aos-duration="400">
+            <div class="skills-heading" data-aos="fade-up" data-aos-duration="300">
                 <h2 class="section-title text-black">My Skills</h2>
                 <p>With a diverse range of technical skills, I deliver complete solutions from front-end interfaces to
                     back-end functionality.</p>
@@ -394,7 +328,8 @@
                 <div class="row">
 
                     <div class="skill-box" tabindex="0" role="button" aria-expanded="false"
-                        aria-label="React - Click for more information">
+                        aria-label="React - Click for more information" data-aos="flip-left" data-aos-duration="300"
+                        data-aos-delay="50">
                         <i class="fa-brands fa-react" aria-hidden="true"></i>
                         <h3>React</h3>
                         <div class="skill-description">
@@ -403,7 +338,8 @@
                         </div>
                     </div>
                     <div class="skill-box" tabindex="0" role="button" aria-expanded="false"
-                        aria-label="TypeScript - Click for more information">
+                        aria-label="TypeScript - Click for more information" data-aos="flip-left"
+                        data-aos-duration="300" data-aos-delay="100">
                         <i class="fa-solid fa-code" aria-hidden="true"></i>
                         <h3>TypeScript</h3>
                         <div class="skill-description">
@@ -413,7 +349,8 @@
                     </div>
 
                     <div class="skill-box" tabindex="0" role="button" aria-expanded="false"
-                        aria-label="Tailwind CSS - Click for more information">
+                        aria-label="Tailwind CSS - Click for more information" data-aos="flip-left"
+                        data-aos-duration="300" data-aos-delay="150">
                         <i class="fa-brands fa-css3-alt" aria-hidden="true"></i>
                         <h3>Tailwind CSS</h3>
                         <div class="skill-description">
@@ -422,7 +359,8 @@
                         </div>
                     </div>
                     <div class="skill-box" tabindex="0" role="button" aria-expanded="false"
-                        aria-label="Next.js - Click for more information">
+                        aria-label="Next.js - Click for more information" data-aos="flip-left" data-aos-duration="300"
+                        data-aos-delay="200">
                         <i class="fa-brands fa-js" aria-hidden="true"></i>
                         <h3>Next.js</h3>
                         <div class="skill-description">
@@ -432,7 +370,8 @@
                     </div>
 
                     <div class="skill-box" tabindex="0" role="button" aria-expanded="false"
-                        aria-label="Node.js - Click for more information">
+                        aria-label="Node.js - Click for more information" data-aos="flip-left" data-aos-duration="300"
+                        data-aos-delay="250">
                         <i class="fa-brands fa-node-js" aria-hidden="true"></i>
                         <h3>Node.js</h3>
                         <div class="skill-description">
@@ -441,7 +380,8 @@
                     </div>
 
                     <div class="skill-box" tabindex="0" role="button" aria-expanded="false"
-                        aria-label="Laravel - Click for more information">
+                        aria-label="Laravel - Click for more information" data-aos="flip-left" data-aos-duration="300"
+                        data-aos-delay="300">
                         <i class="fa-brands fa-laravel" aria-hidden="true"></i>
                         <h3>Laravel</h3>
                         <div class="skill-description">
@@ -451,7 +391,8 @@
                     </div>
 
                     <div class="skill-box" tabindex="0" role="button" aria-expanded="false"
-                        aria-label="Java & Spring Boot - Click for more information">
+                        aria-label="Java & Spring Boot - Click for more information" data-aos="flip-left"
+                        data-aos-duration="300" data-aos-delay="350">
                         <i class="fa-brands fa-java" aria-hidden="true"></i>
                         <h3>Java & Spring Boot</h3>
                         <div class="skill-description">
@@ -461,7 +402,8 @@
                     </div>
 
                     <div class="skill-box" tabindex="0" role="button" aria-expanded="false"
-                        aria-label="PostgreSQL - Click for more information">
+                        aria-label="PostgreSQL - Click for more information" data-aos="flip-left"
+                        data-aos-duration="300" data-aos-delay="400">
                         <i class="fa-solid fa-database" aria-hidden="true"></i>
                         <h3>PostgreSQL</h3>
                         <div class="skill-description">
@@ -469,7 +411,8 @@
                         </div>
                     </div>
                     <div class="skill-box" tabindex="0" role="button" aria-expanded="false"
-                        aria-label="Redis - Click for more information">
+                        aria-label="Redis - Click for more information" data-aos="flip-left" data-aos-duration="300"
+                        data-aos-delay="450">
                         <i class="fa-solid fa-memory" aria-hidden="true"></i>
                         <h3>Redis</h3>
                         <div class="skill-description">
@@ -478,7 +421,8 @@
                     </div>
 
                     <div class="skill-box" tabindex="0" role="button" aria-expanded="false"
-                        aria-label="Git - Click for more information">
+                        aria-label="Git - Click for more information" data-aos="flip-left" data-aos-duration="300"
+                        data-aos-delay="500">
                         <i class="fa-brands fa-git-alt" aria-hidden="true"></i>
                         <h3>Git</h3>
                         <div class="skill-description">
@@ -488,7 +432,8 @@
                     </div>
 
                     <div class="skill-box" tabindex="0" role="button" aria-expanded="false"
-                        aria-label="Docker - Click for more information">
+                        aria-label="Docker - Click for more information" data-aos="flip-left" data-aos-duration="300"
+                        data-aos-delay="550">
                         <i class="fa-brands fa-docker" aria-hidden="true"></i>
                         <h3>Docker</h3>
                         <div class="skill-description">
@@ -497,7 +442,8 @@
                     </div>
 
                     <div class="skill-box" tabindex="0" role="button" aria-expanded="false"
-                        aria-label="Vite - Click for more information">
+                        aria-label="Vite - Click for more information" data-aos="flip-left" data-aos-duration="300"
+                        data-aos-delay="600">
                         <i class="fa-solid fa-bolt" aria-hidden="true"></i>
                         <h3>Vite</h3>
                         <div class="skill-description">
@@ -505,21 +451,17 @@
                         </div>
                     </div>
 
-
-
-
-
                 </div>
             </div>
 
 
             <!-- Detailed Skills by Category -->
-            <div class="detailed-skills">
+            <div class="detailed-skills" data-aos="fade-up" data-aos-duration="400" data-aos-delay="150">
                 <h2 class="section-title">Technical Expertise</h2>
 
                 <div class="skill-categories">
 
-                    <div class="skill-category">
+                    <div class="skill-category" data-aos="fade-up" data-aos-duration="300" data-aos-delay="50">
                         <h3>Front-end</h3>
                         <ul>
                             <li>HTML5 & CSS3, SEO </li>
@@ -531,7 +473,7 @@
                         </ul>
                     </div>
 
-                    <div class="skill-category">
+                    <div class="skill-category" data-aos="fade-up" data-aos-duration="300" data-aos-delay="100">
                         <h3>Back-end</h3>
                         <ul>
                             <li>PHP & Laravel</li>
@@ -540,7 +482,7 @@
                         </ul>
                     </div>
 
-                    <div class="skill-category">
+                    <div class="skill-category" data-aos="fade-up" data-aos-duration="300" data-aos-delay="150">
                         <h3>Database</h3>
                         <ul>
                             <li>Potgresql</li>
@@ -550,7 +492,7 @@
                         </ul>
                     </div>
 
-                    <div class="skill-category">
+                    <div class="skill-category" data-aos="fade-up" data-aos-duration="300" data-aos-delay="200">
                         <h3>Project Management</h3>
                         <ul>
                             <li>Agile Methodologies (Scrum, Kanban)</li>
@@ -560,7 +502,7 @@
                         </ul>
                     </div>
 
-                    <div class="skill-category">
+                    <div class="skill-category" data-aos="fade-up" data-aos-duration="300" data-aos-delay="250">
                         <h3>Architecture & Design Patterns</h3>
                         <ul>
                             <li>MVC Architecture</li>
@@ -570,7 +512,7 @@
                         </ul>
                     </div>
 
-                    <div class="skill-category">
+                    <div class="skill-category" data-aos="fade-up" data-aos-duration="300" data-aos-delay="300">
                         <h3>Development Tools</h3>
                         <ul>
                             <li>GitHub & GitLab</li>
@@ -588,14 +530,11 @@
             </div>
 
 
-        </section>
-
-
-        <!-- Project section -->
+        </section> <!-- Project section -->
         <div class="projects-contain">
-            <section class="project" id="projects">
-                <h2 class="section-title-white text-center"> My Projects</h2>
-                <div class="row">
+            <section class="project" id="projects" data-aos="fade-up" data-aos-duration="400">
+                <h2 class="section-title-white text-center" data-aos="fade-up" data-aos-duration="300"> My Projects</h2>
+                <div class="row" data-aos="fade-right" data-aos-duration="400" data-aos-delay="100">
                     <div class="image">
                         <img src="./imgs/airbooking.png" alt="">
                     </div>
@@ -627,7 +566,7 @@
                 </div>
 
 
-                <div class="row">
+                <div class="row" data-aos="fade-left" data-aos-duration="400" data-aos-delay="200">
 
                     <div class="content">
                         <h2><span class="bold">02 -</span> Family Travel Tracker – Share and Document Family Adventures
@@ -655,7 +594,7 @@
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row" data-aos="fade-right" data-aos-duration="400" data-aos-delay="300">
                     <div class="image">
                         <img src="./imgs/elearning.png" alt="">
                     </div>
@@ -693,7 +632,7 @@
                 </div>
 
 
-                <div class="row">
+                <div class="row" data-aos="fade-left" data-aos-duration="400" data-aos-delay="400">
 
                     <div class="content">
                         <h2><span class="bold">04 -</span> Connectly – MERN Stack Social Media Platform</h2>
@@ -723,26 +662,16 @@
                     </div>
                 </div>
 
-
-
-
-
             </section>
-        </div>
-
-
-
-        <!-- About Section  -->
-
-
-        <section class="about-me-section" id="about">
-            <div class="about-header">
+        </div> <!-- About Section  -->
+        <section class="about-me-section" id="about" data-aos="fade-up" data-aos-duration="400">
+            <div class="about-header" data-aos="fade-up" data-aos-duration="300">
                 <h2 class="section-title">
                     <span class="outline">About</span> <span>Me</span>
                 </h2>
             </div>
 
-            <div class="about-content">
+            <div class="about-content" data-aos="fade-up" data-aos-duration="400" data-aos-delay="100">
                 <p class="about-intro">
                     Passionate, creative, and automation-focused software developer.
                     Committed to writing clean, simple, and functional code, following the DRY principle.
@@ -755,7 +684,7 @@
                     I love creating new designs and putting my skills into practice to develop innovative web solutions.
                 </p>
 
-                <div class="education">
+                <div class="education" data-aos="fade-up" data-aos-duration="300" data-aos-delay="200">
                     <p class="education-title">Education</p>
                     <ul>
                         <li><strong>Full-Stack Web Development</strong> – YOUCODE, UM6P (2024–2026)</li>
@@ -765,7 +694,8 @@
                     </ul>
                 </div>
 
-                <p class="location">📍 Morocco – Salé</p>
+                <p class="location" data-aos="zoom-in" data-aos-duration="300" data-aos-delay="300">📍 Morocco – Salé
+                </p>
             </div>
         </section>
 
@@ -775,12 +705,13 @@
 
 
         <!-- Contact section -->
-        <section id="contact" class="contact">
+        <section id="contact" class="contact" data-aos="fade-up" data-aos-duration="400">
             <div class="contact-container">
-                <h2 class="section-title text-center"><span class="outline bold">Contact</span> Me</h2>
+                <h2 class="section-title text-center" data-aos="fade-up" data-aos-duration="300"><span
+                        class="outline bold">Contact</span> Me</h2>
 
                 <div class="contact-content">
-                    <div class="contact-form">
+                    <div class="contact-form" data-aos="fade-right" data-aos-duration="400" data-aos-delay="100">
                         <form action="">
                             <input type="text" placeholder="Your Name" required>
                             <input type="email" placeholder="Your Email" required>
@@ -789,7 +720,7 @@
                         </form>
                     </div>
 
-                    <div class="contact-info">
+                    <div class="contact-info" data-aos="fade-left" data-aos-duration="400" data-aos-delay="200">
                         <h3>Let's Talk</h3>
                         <p>This form is currently not working. If you want to send an email, please click <a
                                 href="mailto:aliboutaine987@gmail.com"><u>here</u></a>.</p>
@@ -836,10 +767,10 @@
 
 
     <!-- Footer  -->
-    <footer>
+    <footer data-aos="fade-up" data-aos-duration="400">
         <div class="footer-container">
             <div class="footer-content">
-                <div class="footer-brand">
+                <div class="footer-brand" data-aos="fade-up" data-aos-duration="300" data-aos-delay="50">
                     <div class="footer-logo">
                         <img src="./imgs/logo-white.svg" alt="Mohammed Ali Boutaine Logo" class="footer-logo-img">
                         <span>Portfolio</span>
@@ -849,7 +780,7 @@
                     </p>
                 </div>
 
-                <div class="footer-nav">
+                <div class="footer-nav" data-aos="fade-up" data-aos-duration="300" data-aos-delay="100">
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="#home">Home</a></li>
@@ -861,7 +792,7 @@
                     </ul>
                 </div>
 
-                <div class="footer-social">
+                <div class="footer-social" data-aos="fade-up" data-aos-duration="300" data-aos-delay="150">
                     <h4>Follow Me</h4>
                     <div class="footer-social-links">
                         <a href="https://github.com/mohammed-ali-boutaine" target="_blank" aria-label="GitHub">
@@ -880,7 +811,7 @@
                     </div>
                 </div>
 
-                <div class="footer-contact">
+                <div class="footer-contact" data-aos="fade-up" data-aos-duration="300" data-aos-delay="200">
                     <h4>Get In Touch</h4>
                     <div class="footer-contact-info">
                         <p><i class="fa-solid fa-envelope"></i> aliboutaine987@gmail.com</p>
@@ -889,7 +820,7 @@
                 </div>
             </div>
 
-            <div class="footer-bottom">
+            <div class="footer-bottom" data-aos="fade-up" data-aos-duration="300" data-aos-delay="250">
                 <p>&copy; <span id="current-year">2025</span> Mohammed Ali Boutaine. All rights reserved.</p>
             </div>
         </div>
@@ -921,12 +852,25 @@
             loadCSS('./css/media.css');
             loadCSS('./css/help-section.css');
             loadCSS('./css/enhanced-skills.css');
+            loadCSS('./css/aos-custom.css');
 
             // Hide loading overlay when content is ready
             setTimeout(function () {
                 loadingOverlay.classList.add('hidden');
                 // Remove loading class to restore scrollbar
                 document.body.classList.remove('loading');
+
+                // Initialize AOS after loading overlay is hidden
+                if (typeof AOS !== 'undefined') {
+                    AOS.init({
+                        duration: 400,
+                        easing: 'ease-out',
+                        once: true,
+                        offset: 50,
+                        delay: 0,
+                        disable: false // Enable on all devices including mobile
+                    });
+                }
             }, 500); // Short delay to ensure animation is visible
         });
 
@@ -936,12 +880,27 @@
             if (loadingOverlay && !loadingOverlay.classList.contains('hidden')) {
                 loadingOverlay.classList.add('hidden');
                 document.body.classList.remove('loading');
+
+                // Initialize AOS as backup
+                if (typeof AOS !== 'undefined') {
+                    AOS.init({
+                        duration: 400,
+                        easing: 'ease-out',
+                        once: true,
+                        offset: 50,
+                        delay: 0,
+                        disable: false // Enable on all devices including mobile
+                    });
+                }
             }
         });
     </script>
 
     <!-- Load site's main JavaScript -->
     <script src="./js.js" defer></script>
+
+    <!-- AOS (Animate On Scroll) JavaScript -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
 
 </html>

@@ -832,11 +832,8 @@ h1 .bold {
 
 /* Enhanced Footer */
 
-
-
-
 footer {
-    cursor: url(../imgs/cursor-white.svg) 1 1, pointer;
+  cursor: url(../imgs/cursor-white.svg) 1 1, pointer;
 
   background-color: #000;
   color: white;
@@ -1005,72 +1002,159 @@ main h1 .outline {
   font-size: 1.6rem !important;
 }
 
-    .about-me-section {
-      /* background-color: #e6e6e6; */
-      padding: 40px 20px;
-      /* max-width: 900px; */
-      margin: 40px auto;
-      /* border-radius: 12px; */
-      /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); */
-    }
+.about-me-section {
+  /* background-color: #e6e6e6; */
+  padding: 40px 20px;
+  /* max-width: 900px; */
+  margin: 40px auto;
+  /* border-radius: 12px; */
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); */
+}
 
-    .about-me-section .about-header {
-      text-align: center;
-      margin-bottom: 30px;
-    }
+.about-me-section .about-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
 
-    .about-me-section .section-title {
-      font-size: 2em;
-      font-weight: bold;
-    }
+.about-me-section .section-title {
+  font-size: 2em;
+  font-weight: bold;
+}
 
-    /* .about-me-section .section-title .outline {
+/* .about-me-section .section-title .outline {
       color: transparent;
       -webkit-text-stroke: 1px #000;
     } */
 
-    .about-me-section .about-content {
-      background-color: white;
-      line-height: 1.6;
-      margin: auto;
-      align-items: start;
-    }
+.about-me-section .about-content {
+  background-color: white;
+  line-height: 1.6;
+  margin: auto;
+  align-items: start;
+}
 
-    .about-me-section .about-intro,
-    .about-me-section .about-description {
-      margin-bottom: 20px;
-    }
+.about-me-section .about-intro,
+.about-me-section .about-description {
+  margin-bottom: 20px;
+}
 
-    /* .about-me-section .education {
+/* .about-me-section .education {
       margin-top: 30px;
     } */
 
-    .about-me-section .education-title {
-      font-weight: bold;
-      font-size: 1.1em;
-      margin-bottom: 10px;
-    }
+.about-me-section .education-title {
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
 
-    .about-me-section ul {
-      padding-left: 20px;
-      list-style-type: disc;
-    }
+.about-me-section ul {
+  padding-left: 20px;
+  list-style-type: disc;
+}
 
-    .about-me-section ul li {
-      margin-bottom: 8px;
-    }
+.about-me-section ul li {
+  margin-bottom: 8px;
+}
 
-    .about-me-section .location {
-      margin-top: 20px;
-      font-weight: bold;
-    }
+.about-me-section .location {
+  margin-top: 20px;
+  font-weight: bold;
+}
 
-    @media (max-width: 600px) {
-      .about-me-section {
-        padding: 30px 15px;
-      }
+@media (max-width: 600px) {
+  .about-me-section {
+    padding: 30px 15px;
+  }
 
-      .about-me-section .section-title {
-        font-size: 1.6em;
-      }
-    }
+  .about-me-section .section-title {
+    font-size: 1.6em;
+  }
+}
+
+
+/* Header styles for immediate display */
+header {
+  background-color: #ffffff;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 1000;
+  margin-bottom: 60px;
+  box-shadow: 0 2px 20px rgba(68, 68, 68, 0.1);
+}
+
+nav {
+  max-width: 1240px;
+  margin: auto;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-color);
+  text-transform: capitalize;
+}
+
+nav .logo a {
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: "Lexend Deca", sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+nav .logo img {
+  height: 30px;
+}
+
+/* Loading overlay styles */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.loading-overlay.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Body loading state */
+body.loading {
+  overflow: hidden;
+}
