@@ -1,0 +1,27 @@
+
+# Enable mod_headers if not already enabled
+<IfModule mod_headers.c>
+    # Content Security Policy - Allows your current setup (AOS, Google Fonts, inline styles)
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self';"
+    
+    # HTTP Strict Transport Security - Enforce HTTPS
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+    
+    # Cross-Origin Opener Policy - Prevent cross-origin attacks
+    Header always set Cross-Origin-Opener-Policy "same-origin"
+    
+    # X-Frame-Options - Prevent clickjacking
+    Header always set X-Frame-Options "DENY"
+    
+    # Additional security headers
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+</IfModule>
+
+# Redirect HTTP to HTTPS (if not already configured by your host)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>

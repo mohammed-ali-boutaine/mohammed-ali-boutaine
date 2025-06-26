@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Typing effect
   const textElement = document.getElementById("typing-text");
   if (textElement) {
-    console.log(document.title);
+    // console.log(document.title);
     let words;
     // Check if we're on the French version or English version
     if (document.title.includes("FullStack Developer")) {

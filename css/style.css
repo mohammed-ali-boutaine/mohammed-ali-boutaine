@@ -977,14 +977,7 @@ footer {
   font-size: 1.6rem;
 }
 
-/* Additional explicit font-size declarations to prevent deprecated API warnings */
-section h1,
-article h1,
-aside h1,
-nav h1,
-main h1 {
-  font-size: 1.4rem !important;
-}
+/* Removed duplicate h1 declarations - already defined above */
 
 section h1 .bold,
 article h1 .bold,

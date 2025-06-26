@@ -20,8 +20,12 @@
     <meta property="og:description"
         content="I am Mohammed Ali Boutaine, a FullStack Developer. Explore my skills and projects. Contact me for collaboration.">
     <meta property="og:image" content="https://medali.online/imgs/logo.svg">
-    <meta property="og:url" content="medali.online">
-    <meta property="og:url" content="https://medali.online"> <!-- Critical CSS inlined to avoid render blocking -->
+    <meta property="og:url" content="https://medali.online">
+
+    <!-- Security Headers (fallback - server-side headers are preferred) -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self';">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff"> <!-- Critical CSS inlined to avoid render blocking -->
     <style>
         /* Minimal critical CSS for immediate loading */
         body.loading {
