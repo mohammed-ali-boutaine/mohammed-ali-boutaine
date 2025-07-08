@@ -55,24 +55,12 @@ document.addEventListener("DOMContentLoaded", function () {
   // Typing effect
   const textElement = document.getElementById("typing-text");
   if (textElement) {
-    // console.log(document.title);
-    let words;
-    // Check if we're on the French version or English version
-    if (document.title.includes("FullStack Developer")) {
-      words = [
-        "do Front-End Development.",
-        "do Back-end Development. ",
-        "Design WebSite. ",
-        "Manage Database. ",
-      ];
-    } else {
-      words = [
-        "Faire du développement Front-End. ",
-        "Faire du développement Back-End. ",
-        "Concevoir un site Web. ",
-        "Gérer une base de données. ",
-      ];
-    }
+    const words = [
+      "Full Stack Web Apps",
+      "Design with Figma",
+      "WordPress & Elementor",
+      "WebFlow",
+    ];
 
     let wordIndex = 0;
     let charIndex = 0;
