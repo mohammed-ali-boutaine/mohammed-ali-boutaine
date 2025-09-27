@@ -1,6 +1,7 @@
 /* Help Section Styles */
 .help-section {
   /* padding: 80px 0; */
+  cursor: url(../imgs/cursor-white.svg) 1 1, pointer;
   color: #f5f5f5;
   font-family: "Lexend Deca", sans-serif;
 }
@@ -275,7 +276,7 @@ padding: 12px;  }
     padding: 5px;
 }
 .services-container {
-    padding: 0px 0;
+    padding: 0px 16px;
     margin-top: 40px;
     background: black;
 }

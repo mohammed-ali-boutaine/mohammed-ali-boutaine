@@ -3,7 +3,7 @@ Welcome to my GitHub profile! I'm a **web developer** currently mastering **Lara
 ## 🚀 Tech Stack
 **Frontend:** HTML5 & CSS3, SEO ,Javascript , TypeScript , React Next.js ,Astro , Tailwind CSS.
 
-**Backend:**  PHP & Laravel , Node.js & Express.js , Java & Spring Boot , Python , C .
+**Backend:**  PHP & Laravel , Node.js & Express.js  , Python , C .
 
 **Database:** PostgreSQL, MySQL, MongoDB ,Redis.
 

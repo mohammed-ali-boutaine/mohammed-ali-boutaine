@@ -303,6 +303,10 @@
     padding: 30px;
   }
 
+  .contact-form img {
+    display: none; /* Hide the contact image on mobile */
+  }
+
   .contact-social {
     justify-content: center;
   }
